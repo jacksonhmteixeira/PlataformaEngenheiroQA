@@ -1,7 +1,5 @@
 import { Component, PipeTransform } from '@angular/core';
 
-import { faHome, faAddressCard, faSearch, faCut } from '@fortawesome/free-solid-svg-icons';
-
 import { DecimalPipe } from '@angular/common';
 import { FormControl } from '@angular/forms';
 import { AuthService } from './login/auth.service'
@@ -48,13 +46,6 @@ function search(text: string, pipe: PipeTransform): Menu[] {
 })
 
 export class AppComponent {
-
-  //ICONES UTILIZADOS
-  faHome = faHome;
-  faAddressCard = faAddressCard;
-  faSearch = faSearch
-  faCut = faCut;
-
   //MOSTRAR MENU
   mostrarMenu: boolean = false;
   loginON: boolean = false;

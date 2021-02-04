@@ -63,11 +63,8 @@
   
   <!-- MOSTRAR SOMENTE QUANDO ESTIVER LOGADO -->
   <div>
-    <div class="body-content" *ngIf="loginON"> 
+    <div> 
       <router-outlet ></router-outlet>
     </div>
-  </div>
-  <div *ngIf="!loginON">
-    <router-outlet></router-outlet>
   </div>
 </div>
