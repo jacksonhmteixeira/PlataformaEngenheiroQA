@@ -7,17 +7,21 @@ import { AuthService } from 'src/app/login/auth.service';
 
 interface Produto {
   name: string;
+  url: string;
 }
 
 const PRODUTO: Produto[] = [
   {
-    name: 'Capsula'
+    name: 'Capsula',
+    url: '../../../assets/playstation-4.jpg'
   },
   {
-    name: 'Playstation 4'
+    name: 'Playstation 4',
+    url: '../../../assets/playstation-4.jpg'
   },
   {
-    name: 'Controle'
+    name: 'Controle',
+    url: '../../../assets/controle.jpg'
   }
 ];
 

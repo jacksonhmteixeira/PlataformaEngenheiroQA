@@ -10,7 +10,7 @@
     left: 0;
     height: 100vh;
     z-index: 999;
-    background: #7386D5;
+    background: #636570;
     color: #fff;
     transition: all 0.3s;
 }
@@ -69,14 +69,14 @@ a, a:hover, a:focus {
 }
 
 #sidebar {
-    background: #7386D5;
+    background: #16a085;
     color: #fff;
     transition: all 0.3s;
 }
 
 #sidebar .sidebar-header {
     padding: 20px;
-    background: #6d7fcc;
+    background: #2c2e35;
 }
 
 #sidebar ul.components {
@@ -94,22 +94,14 @@ a, a:hover, a:focus {
     display: block;
 }
 #sidebar ul li a:hover {
-    color: #7386D5;
+    color: #16a085;
     background: #fff;
 }
 
 #sidebar ul li.active > a, a[aria-expanded="true"] {
     color: #fff;
-    background: #6d7fcc;
+    background: #0f826b;
 }
-
-
-ul ul a {
-    font-size: 0.9em !important;
-    padding-left: 30px !important;
-    background: #6d7fcc;
-}
-
 
 /* DEFININDO IMAGEM DE PERFIL DO NAVBAR */
 .img_perfil_navbar {
