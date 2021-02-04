@@ -16,14 +16,14 @@
                     Você esqueceu de informar o e-mail.
                 </small>
 
-
                 <small *ngIf="!formFields.email.errors" id="emailHelp" class="form-text text-muted">Nós não
                     compartilharemos seu e-mail com
                     ninguém.</small>
             </div>
             <div class="form-group" [ngClass]="{'has-error': formFields.senha.touched && formFields.senha.errors}">
                 <label for="exampleInputPassword1">Senha: <small class="text-danger">*</small></label>
-                <input formControlName="senha" placeholder="Digite sua senha." type="password" class="form-control" id="senha">
+                <input formControlName="senha" placeholder="Digite sua senha." type="password" class="form-control"
+                    id="senha">
 
                 <small *ngIf="formFields.senha.touched && formFields.senha.errors" class="text-danger" role="alert">
                     Você esqueceu de informar o senha.
@@ -34,9 +34,8 @@
                 <label class="form-check-label" for="senha">Lembrar Login</label>
             </div>
             <div class="text-center">
-                <button class="btn btn-primary" (click)="realizarLogin(loginForm.value)"><span class="material-icons">
-                    login
-                    </span> ENTRAR</button>
+                <button class="btn btn-primary" (click)="realizarLogin(loginForm.value)">
+                    ENTRAR</button>
                 <button class="btn btn-secondary ml-2">CADASTRE-SE</button>
             </div>
         </form>

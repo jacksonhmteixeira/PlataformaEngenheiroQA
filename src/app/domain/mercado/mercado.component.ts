@@ -12,16 +12,16 @@ interface Produto {
 
 const PRODUTO: Produto[] = [
   {
-    name: 'Capsula',
-    url: '../../../assets/playstation-4.jpg'
+    name: 'Fone de Ouvido',
+    url: '../../../assets/Fone de Ouvido.png'
   },
   {
     name: 'Playstation 4',
-    url: '../../../assets/playstation-4.jpg'
+    url: '../../../assets/playstation-4.png'
   },
   {
     name: 'Controle',
-    url: '../../../assets/controle.jpg'
+    url: '../../../assets/controle.png'
   }
 ];
 
