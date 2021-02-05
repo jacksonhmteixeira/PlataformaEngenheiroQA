@@ -22,15 +22,18 @@ const PRODUTO: Produto[] = [
   {
     name: 'Controle',
     url: '../../../assets/controle.png'
+  },
+  {
+    name: 'Controle',
+    url: '../../../assets/controle.png'
+  },
+  {
+    name: 'Controle',
+    url: '../../../assets/controle.png'
   }
 ];
 
-function search(text: string, pipe: PipeTransform): Produto[] {
-  return PRODUTO.filter(produto => {
-    const term = text.toLowerCase();
-    return produto.name.toLowerCase().includes(term);
-  });
-}
+
 
 @Component({
   selector: 'app-mercado',
@@ -51,12 +54,18 @@ export class MercadoComponent implements OnInit {
   constructor(pipe: DecimalPipe, private authService: AuthService) {
     this.produto$ = this.filterProduto.valueChanges.pipe(
       startWith(''),
-      map(text => search(text, pipe))
+      map(text => this.search(text, pipe))
     );
   }
 
   ngOnInit(){
 
+  }
 
+  search(text: string, pipe: PipeTransform): Produto[] {
+    return PRODUTO.filter(produto => {
+      const term = text.toLowerCase();
+      return produto.name.toLowerCase().includes(term);
+    });
   }
 }
