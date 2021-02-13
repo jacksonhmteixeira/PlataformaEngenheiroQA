@@ -25,10 +25,21 @@ const MENU: Menu[] = [
     label: 'Mercado'
   },
   {
-    rota: '/afiliados',
+    rota: '/afiliado',
     icon: 'people_alt',
     label: 'Meus Afiliados'
+  },
+  {
+    rota: '/produto',
+    icon: 'widgets',
+    label: 'Produtos'
+  },
+  {
+    rota: '/saldo',
+    icon: 'attach_money',
+    label: 'Saldo'
   }
+
 ];
 
 function search(text: string, pipe: PipeTransform): Menu[] {

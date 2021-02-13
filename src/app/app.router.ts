@@ -8,6 +8,9 @@ import { AuthGuard } from './guards/auth.guard';
 import { PainelComponent } from './domain/painel/painel.component';
 import { MercadoComponent } from './domain/mercado/mercado.component';
 import { MeusAfiliadosComponent } from './domain/meus-afiliados/meus-afiliados.component';
+import { ProdutoComponent } from './domain/produto/produto.component';
+import { UsuarioComponent } from './domain/usuario/usuario.component';
+import { SaldoComponent } from './domain/saldo/saldo.component';
 
 export const AppRoutes: Routes = [
     {
@@ -17,7 +20,10 @@ export const AppRoutes: Routes = [
             { path: 'login', component: LoginComponent},
             { path: 'painel', component: PainelComponent, canActivate: [AuthGuard]},
             { path: 'mercado', component: MercadoComponent, canActivate: [AuthGuard]},
-            { path: 'afiliados', component: MeusAfiliadosComponent, canActivate: [AuthGuard]},
+            { path: 'afiliado', component: MeusAfiliadosComponent, canActivate: [AuthGuard]},
+            { path: 'produto', component: ProdutoComponent, canActivate: [AuthGuard]},
+            { path: 'saldo', component: SaldoComponent, canActivate: [AuthGuard]},
+            { path: 'usuario', component: UsuarioComponent},
             { path: '**', component: PageNotFoundComponent}
         ]
     }

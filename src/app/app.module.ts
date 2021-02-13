@@ -18,6 +18,9 @@ import { ToastrModule } from 'ngx-toastr';
 import { PainelComponent } from './domain/painel/painel.component';
 import { MercadoComponent } from './domain/mercado/mercado.component';
 import { MeusAfiliadosComponent } from './domain/meus-afiliados/meus-afiliados.component';
+import { ProdutoComponent } from './domain/produto/produto.component';
+import { SaldoComponent } from './domain/saldo/saldo.component';
+import { UsuarioComponent } from './domain/usuario/usuario.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { MeusAfiliadosComponent } from './domain/meus-afiliados/meus-afiliados.c
     LoginComponent,
     PainelComponent,
     MercadoComponent,
-    MeusAfiliadosComponent
+    MeusAfiliadosComponent,
+    ProdutoComponent,
+    SaldoComponent,
+    UsuarioComponent
   ],
   imports: [
     BrowserModule,
