@@ -6,12 +6,7 @@ import { AuthService } from './login/auth.service'
 
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
-
-interface Menu {
-  rota: string;
-  icon: string;
-  label: string;
-}
+import { Menu } from './menu.list';
 
 const MENU: Menu[] = [
   {
@@ -42,13 +37,6 @@ const MENU: Menu[] = [
 
 ];
 
-function search(text: string, pipe: PipeTransform): Menu[] {
-  return MENU.filter(menu => {
-    const term = text.toLowerCase();
-    return menu.label.toLowerCase().includes(term);
-  });
-}
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -67,8 +55,15 @@ export class AppComponent {
   constructor(pipe: DecimalPipe, private authService: AuthService) {
     this.menus$ = this.filter.valueChanges.pipe(
       startWith(''),
-      map(text => search(text, pipe))
+      map(text => this.search(text, pipe))
     );
+  }
+ 
+  search(text: string, pipe: PipeTransform): Menu[] {
+    return MENU.filter(menu => {
+      const term = text.toLowerCase();
+      return menu.label.toLowerCase().includes(term);
+    });
   }
 
   ngOnInit(){
