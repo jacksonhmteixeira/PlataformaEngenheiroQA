@@ -34,7 +34,6 @@ const MENU: Menu[] = [
     icon: 'attach_money',
     label: 'Saldo'
   }
-
 ];
 
 @Component({
@@ -71,6 +70,5 @@ export class AppComponent {
       mostrar => this.mostrarMenu = mostrar, 
       mostrar => this.loginON = mostrar
     );
-
   }
 }

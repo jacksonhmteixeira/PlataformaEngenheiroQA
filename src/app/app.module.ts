@@ -10,7 +10,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AppRouting } from './app.router';
 import { AuthService } from './login/auth.service';
-import { PageNotFoundComponent } from './domain/page-not-found/page-not-found.component';
+import { PageNotFoundComponent } from './errors/page-not-found/page-not-found.component';
 import { LoginComponent } from './login/login.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -21,6 +21,7 @@ import { MeusAfiliadosComponent } from './domain/meus-afiliados/meus-afiliados.c
 import { ProdutoComponent } from './domain/produto/produto.component';
 import { SaldoComponent } from './domain/saldo/saldo.component';
 import { UsuarioComponent } from './domain/usuario/usuario.component';
+import { VMessageModule } from './shared/components/vmessage/vmessage.module';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { UsuarioComponent } from './domain/usuario/usuario.component';
     NgbPaginationModule, 
     NgbAlertModule,
     NgbModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    VMessageModule
   ],
   providers: [
     AuthService

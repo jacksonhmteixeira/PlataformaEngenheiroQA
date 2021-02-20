@@ -6,36 +6,25 @@
                 <h3>Seja bem-vindo!</h3>
             </div>
 
-            <div class="form-group has-error"
-                [ngClass]="{'has-error': formFields.email.touched && formFields.email.errors}">
-                <label for="email">E-mail: <b class="text-danger">*</b></label>
-                <input type="email" id="email" class="form-control form-control-danger" name="email"
-                    formControlName="email" maxlength="50" placeholder="Digite seu e-mail." required>
-
-                <small *ngIf="formFields.email.touched && formFields.email.errors" class="text-danger" role="alert">
-                    Você esqueceu de informar o e-mail.
-                </small>
-
+            <div class="form-group" [ngClass]="{'has-error': formFields.email.touched}">
+                <label for="email">E-mail: <small class="text-danger">*</small></label>
+                <input type="email" id="email" class="form-control" formControlName="email" maxlength="50" placeholder="Digite seu e-mail.">
+                <div *ngIf="formFields.email.touched">
+                    <ap-vmessage *ngIf="loginForm.get('email').errors?.required" text="E-mail is required!"></ap-vmessage>
+                </div>
                 <small *ngIf="!formFields.email.errors" id="emailHelp" class="form-text text-muted">Nós não
-                    compartilharemos seu e-mail com
-                    ninguém.</small>
-            </div>
-            <div class="form-group" [ngClass]="{'has-error': formFields.senha.touched && formFields.senha.errors}">
-                <label for="exampleInputPassword1">Senha: <small class="text-danger">*</small></label>
-                <input formControlName="senha" placeholder="Digite sua senha." type="password" class="form-control"
-                    id="senha">
-
-                <small *ngIf="formFields.senha.touched && formFields.senha.errors" class="text-danger" role="alert">
-                    Você esqueceu de informar o senha.
+                    compartilharemos seu e-mail com ninguém.
                 </small>
             </div>
-            <div class="form-group form-check">
-                <input type="checkbox" class="form-check-input">
-                <label class="form-check-label" for="senha">Lembrar Login</label>
+            <div class="form-group" [ngClass]="{'has-error': formFields.password.touched}">
+                <label for="password">Senha: <small class="text-danger">*</small></label>
+                <input formControlName="password" placeholder="Digite sua senha." type="password" class="form-control" id="password">
+                <div *ngIf="formFields.password.touched">
+                    <ap-vmessage *ngIf="loginForm.get('password').errors?.required" text="Senha é obrigatório!"></ap-vmessage>
+                </div>
             </div>
             <div class="text-center">
-                <button class="btn btn-primary" (click)="realizarLogin(loginForm.value)">
-                    ENTRAR</button>
+                <button class="btn btn-primary" (click)="realizarLogin(loginForm.value)">ENTRAR</button>
                 <button class="btn btn-secondary ml-2" [routerLink]="['/usuario']">CADASTRE-SE</button>
             </div>
         </form>

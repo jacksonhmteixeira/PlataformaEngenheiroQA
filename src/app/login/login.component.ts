@@ -27,8 +27,8 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.loginForm = this.builder.group({
-      email: this.builder.control('', [Validators.required]),
-      senha: this.builder.control('', [Validators.required])
+      email: ['', Validators.required],
+      password: ['', Validators.required]
     })
   }
 
@@ -39,11 +39,17 @@ export class LoginComponent implements OnInit {
   realizarLogin(usuario: Usuario) {
     this.submitted = true;
 
-    if (this.loginForm.invalid) {
-      this.toastr.error('Preencha os campos.', "Eii usuário!");
-      return;
+    if(this.loginForm.valid){
+      this.authService.fazerLogin(this.loginForm.value);
+    } else {
+      if (this.loginForm.invalid) {
+          Object.keys(this.loginForm.controls).forEach(campo =>{
+            console.log(campo);
+            const controle = this.loginForm.get(campo);
+            controle.markAsDirty;
+          });
+      }
     }
 
-    this.authService.fazerLogin(this.loginForm.value);
   }
 }
