@@ -18,7 +18,7 @@ export class AuthService {
   mostrarMenuEmitter = new EventEmitter<boolean>();
 
   fazerLogin(usuario: Usuario) {
-    if (usuario.email === "teste@gmail.com" && usuario.senha === "123") {
+    if (usuario.email === "teste@gmail.com" && usuario.password === "123") {
       this.usuarioAutenticado = true;
       this.mostrarMenuEmitter.emit(true);
       this.router.navigate(['/painel']);
