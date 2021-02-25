@@ -22,14 +22,6 @@ const PRODUTO: Produto[] = [
   {
     name: 'Controle',
     url: '../../../assets/controle.png'
-  },
-  {
-    name: 'Controle',
-    url: '../../../assets/controle.png'
-  },
-  {
-    name: 'Controle',
-    url: '../../../assets/controle.png'
   }
 ];
 
