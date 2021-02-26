@@ -22,7 +22,7 @@ export class AuthService {
       this.usuarioAutenticado = true;
       this.mostrarMenuEmitter.emit(true);
       this.router.navigate(['/painel']);
-      this.toastr.success('Seja bem-vindo ao NextStar', "Bem-Vindo");
+      // this.toastr.success('Seja bem-vindo ao NextStar', "Bem-Vindo");
     } else {
       this.usuarioAutenticado = false;
       this.mostrarMenuEmitter.emit(false);

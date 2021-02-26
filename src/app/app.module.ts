@@ -22,6 +22,9 @@ import { ProdutoComponent } from './domain/produto/produto.component';
 import { SaldoComponent } from './domain/saldo/saldo.component';
 import { UsuarioComponent } from './domain/usuario/usuario.component';
 import { VMessageModule } from './shared/components/vmessage/vmessage.module';
+import { MercadoModule } from './domain/mercado/mercado.module'; 
+import { MeusAfiliadosModule } from './domain/meus-afiliados/meus-afiliados.module';
+import { LoginModule } from './login/login.module';
 
 @NgModule({
   declarations: [
@@ -29,8 +32,6 @@ import { VMessageModule } from './shared/components/vmessage/vmessage.module';
     PageNotFoundComponent,
     LoginComponent,
     PainelComponent,
-    MercadoComponent,
-    MeusAfiliadosComponent,
     ProdutoComponent,
     SaldoComponent,
     UsuarioComponent
@@ -47,7 +48,9 @@ import { VMessageModule } from './shared/components/vmessage/vmessage.module';
     NgbAlertModule,
     NgbModule,
     FontAwesomeModule,
-    VMessageModule
+    VMessageModule,
+    MercadoModule,
+    MeusAfiliadosModule
   ],
   providers: [
     AuthService
