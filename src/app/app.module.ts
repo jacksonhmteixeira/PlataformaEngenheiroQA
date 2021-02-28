@@ -11,30 +11,21 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AppRouting } from './app.router';
 import { AuthService } from './login/auth.service';
 import { PageNotFoundComponent } from './errors/page-not-found/page-not-found.component';
-import { LoginComponent } from './login/login.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
-import { PainelComponent } from './domain/painel/painel.component';
-import { MercadoComponent } from './domain/mercado/mercado.component';
-import { MeusAfiliadosComponent } from './domain/meus-afiliados/meus-afiliados.component';
-import { ProdutoComponent } from './domain/produto/produto.component';
-import { SaldoComponent } from './domain/saldo/saldo.component';
-import { UsuarioComponent } from './domain/usuario/usuario.component';
-import { VMessageModule } from './shared/components/vmessage/vmessage.module';
 import { MercadoModule } from './domain/mercado/mercado.module'; 
 import { MeusAfiliadosModule } from './domain/meus-afiliados/meus-afiliados.module';
-import { LoginModule } from './login/login.module';
+import { PainelModule } from './domain/painel/painel.module'
+import { UsuarioModule } from './domain/usuario/usuario.module'
+import { LoginModule } from './login/login.module'
+import { SaldoModule } from './domain/saldo/saldo.module'
+import { ProdutoModule } from './domain/produto/produto.module'
 
 @NgModule({
   declarations: [
     AppComponent,
-    PageNotFoundComponent,
-    LoginComponent,
-    PainelComponent,
-    ProdutoComponent,
-    SaldoComponent,
-    UsuarioComponent
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -48,9 +39,13 @@ import { LoginModule } from './login/login.module';
     NgbAlertModule,
     NgbModule,
     FontAwesomeModule,
-    VMessageModule,
     MercadoModule,
-    MeusAfiliadosModule
+    MeusAfiliadosModule,
+    PainelModule,
+    UsuarioModule,
+    LoginModule,
+    SaldoModule,
+    ProdutoModule
   ],
   providers: [
     AuthService
