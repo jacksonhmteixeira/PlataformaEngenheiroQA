@@ -1,11 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { faSmileWink, faSignInAlt } from '@fortawesome/free-solid-svg-icons';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { AuthService } from './auth.service';
 import { Usuario } from './usuario'
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup } from '@angular/forms';
 import { FormBuilder } from '@angular/forms';
 import { Validators } from '@angular/forms';
-import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-login',
@@ -16,13 +14,13 @@ export class LoginComponent implements OnInit {
   //DECLARACAO DE ICONES
 
   loginForm: FormGroup;
+  @ViewChild('emailInput') emailInput: ElementRef<HTMLInputElement>;
   usuario: Usuario;
   submitted = false;
 
   constructor(
     private builder: FormBuilder,
     private authService: AuthService,
-    private toastr: ToastrService
   ) { }
 
   ngOnInit(): void {
@@ -39,17 +37,15 @@ export class LoginComponent implements OnInit {
   realizarLogin(usuario: Usuario) {
     this.submitted = true;
 
-    if(this.loginForm.valid){
-      this.authService.fazerLogin(this.loginForm.value);
-    } else {
-      if (this.loginForm.invalid) {
-          Object.keys(this.loginForm.controls).forEach(campo =>{
-            console.log(campo);
-            const controle = this.loginForm.get(campo);
-            controle.markAsDirty;
-          });
-      }
+    this.authService.fazerLogin(this.loginForm.value);
+    this.emailInput.nativeElement.focus();
+    this.loginForm.reset();
+    
+    if (this.loginForm.invalid) {
+      Object.keys(this.loginForm.controls).forEach(campo => {
+        const controle = this.loginForm.get(campo);
+        controle.markAsDirty;
+      });
     }
-
   }
 }

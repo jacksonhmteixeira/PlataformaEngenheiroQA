@@ -11,8 +11,9 @@ import { LoginComponent } from "./login.component";
     imports: [
         ReactiveFormsModule,
         FormsModule,
-        CommonModule, 
-        AppRouting
+        CommonModule,
+        AppRouting,
+        VMessageModule
     ]
 })
 export class LoginModule {
