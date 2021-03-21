@@ -34,7 +34,15 @@ export class MercadoComponent implements OnInit {
     {
       name: 'Controle',
       urlImage: '../../../assets/controle.png'
-    }
+    },
+    {
+      name: 'Fone de Ouvido',
+      urlImage: '../../../assets/Fone de Ouvido.png'
+    },
+    {
+      name: 'Playstation 4',
+      urlImage: '../../../assets/playstation-4.png'
+    },
   ];  
 
   produto$: Observable<Produto[]>;
