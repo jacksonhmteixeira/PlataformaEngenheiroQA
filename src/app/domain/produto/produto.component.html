@@ -6,13 +6,37 @@
         </ol>
     </nav>
 
-    <div>
-        <button class="btn btn-warning">LIMPAR FILTRO</button>
-        <button class="btn btn-success">PESQUISAR</button>
+    <div class="jumbotron-filtro">
+        <div class="row">
+            <div class="mb-3 col-md-6 form-group">
+                <label for="produto">Produto:</label>
+                <select class="form-control" id="produto">
+                    <option selected>Selecione...</option>
+                    <option>Curso Completo de Teste Automatizado</option>
+                    <option>Curso Completo de Teste de Software</option>
+                    <option>Curso Completo de Teste Funcional</option>
+                </select>
+            </div>
+            <div class="mb-3 col-md-6 form-group">
+                <label for="categoria">Categoria:</label>
+                <select class="form-control" id="categoria">
+                    <option selected>Selecione...</option>
+                    <option>E-book</option>
+                    <option>Curso</option>
+                    <option>Arquivo</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-end">
+            <button class="btn btn-warning">LIMPAR FILTRO</button>
+            <button class="btn btn-success ml-2">PESQUISAR</button>
+        </div>
     </div>
 
-    <div class="d-flex justify-content-end">
-        <button class="btn btn-success">CRIAR PRODUTO</button>
+
+    <div class="d-flex justify-content-start">
+        <button class="btn btn-success mb-3">CRIAR PRODUTO</button>
     </div>
 
     <table class="table table-striped">

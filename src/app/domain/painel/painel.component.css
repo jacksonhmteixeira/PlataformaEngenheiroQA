@@ -1,8 +1,3 @@
-.body-content {
-    padding-top: 65px;
-    padding-right: 10px;
-}
-
 .split-in-half {
     display: grid;
     grid-column-gap: 10px;
@@ -10,24 +5,9 @@
 }
 
 @media (min-width: 1120px) {
-    .body-content {
-        padding-left: 260px;
-    }
     .split-in-half{
         grid-template-columns: repeat(2, 1fr);
     }    
-}
-
-@media (max-width: 1120px) and (min-width: 768px) {
-    .body-content {
-        padding-left: 260px;
-    }
-}
-
-@media (max-width: 768px) {
-    .body-content {
-        padding-left: 10px;
-    }
 }
 
 .jumbotron-height-550 {

@@ -1,16 +1,6 @@
-.body-content{
-    padding-top: 65px;
-    padding-right: 10px;
-}
-
-@media (min-width: 768px) {
-    .body-content {
-        padding-left: 260px;
-    }
-}
-
-@media (max-width: 768px) {
-    .body-content {
-        padding-left: 10px;
-    }
+.jumbotron-filtro {
+    padding: .75rem 1rem;
+    margin-bottom: 1rem;
+    background-color: #e9ecef;
+    border-radius: .25rem;
 }
