@@ -24,10 +24,12 @@
             <div class="card align-center" style="width: 100%;">
                 <img src="{{produto.urlImage}}" class="card-img-top">
                 <div class="card-body">
-                    <h5 class="card-title" [term]="filterProduto.name">{{produto.name}}</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the
-                        card's content.</p>
+
+                    <h5 class="card-title" [term]="filterProduto.name">
+                        <span class="badge bg-light">{{produto.id}}</span>
+                        {{produto.name}}
+                    </h5>
+                    <p class="card-text">{{produto.description}}</p>
                     <ngb-rating [(rate)]="currentRate" [readonly]="readonly">
                         <ng-template let-fill="fill" let-index="index">
                             <span class="star" [class.filled]="fill === 100" [class.bad]="index < 5">&#9733;</span>

@@ -5,12 +5,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRouting } from "src/app/app.router";
 import { ProdutoComponent } from "./produto.component";
-import { NgbdSortableHeader } from "./sortable.directive";
+import { SortableProduto } from "./sortable.directive";
 
 @NgModule({
-    declarations: [ProdutoComponent, NgbdSortableHeader],
+    declarations: [ProdutoComponent, SortableProduto],
     exports: [ProdutoComponent],
-    providers: [DecimalPipe],
     imports: [
         BrowserModule,
         CommonModule,

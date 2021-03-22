@@ -1,17 +1,19 @@
 import { Component, OnInit, QueryList, ViewChildren } from '@angular/core';
-import { NgbdSortableHeader, SortEvent } from './sortable.directive';
+import { SortableProduto, SortEvent } from './sortable.directive';
 import { ProdutoService } from './produto.service'
 import { Produto } from './produto';
 import { Observable } from 'rxjs';
+import { DecimalPipe } from '@angular/common';
 
 @Component({
   selector: 'app-produto',
   templateUrl: './produto.component.html',
-  styleUrls: ['./produto.component.css']
+  styleUrls: ['./produto.component.css'],
+  providers: [ProdutoService, DecimalPipe]
 })
 export class ProdutoComponent implements OnInit {
 
-  @ViewChildren(NgbdSortableHeader) headers: QueryList<NgbdSortableHeader>;
+  @ViewChildren(SortableProduto) headers: QueryList<SortableProduto>;
 
   produtos$: Observable<Produto[]>;
   total$: Observable<number>;
@@ -25,7 +27,6 @@ export class ProdutoComponent implements OnInit {
   }
 
   onSort({ column, direction }: SortEvent) {
-    // resetting other headers
     this.headers.forEach(header => {
       if (header.sortable !== column) {
         header.direction = '';
