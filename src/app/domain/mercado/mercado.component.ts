@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
 import { AuthService } from 'src/app/login/auth.service';
 import { Produto } from '../produto/produto';
+import { PRODUTO } from '../produto/produtos';
 
 
 
@@ -21,29 +22,6 @@ export class MercadoComponent implements OnInit {
   produto: Produto;
   mostrarProduto: boolean = false;
   loginON: boolean = false;
-
-  PRODUTO: Produto[] = [
-    {
-      name: 'Fone de Ouvido',
-      urlImage: '../../../assets/Fone de Ouvido.png'
-    },
-    {
-      name: 'Playstation 4',
-      urlImage: '../../../assets/playstation-4.png'
-    },
-    {
-      name: 'Controle',
-      urlImage: '../../../assets/controle.png'
-    },
-    {
-      name: 'Fone de Ouvido',
-      urlImage: '../../../assets/Fone de Ouvido.png'
-    },
-    {
-      name: 'Playstation 4',
-      urlImage: '../../../assets/playstation-4.png'
-    },
-  ];  
 
   produto$: Observable<Produto[]>;
   filterProduto = new FormControl('');
@@ -63,7 +41,7 @@ export class MercadoComponent implements OnInit {
   }
 
   search(text: string, pipe: PipeTransform): Produto[] {
-    return this.PRODUTO.filter(produto => {
+    return PRODUTO.filter(produto => {
       const term = text.toLowerCase();
       return produto.name.toLowerCase().includes(term);
     });

@@ -1,4 +1,7 @@
 export class Produto {
-    name: string;
-    urlImage: string;
-  }
+  name: string;
+  category: string;
+  description: string;
+  status: string;
+  urlImage: string;
+}
