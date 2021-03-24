@@ -35,8 +35,7 @@ function sort(produtos: Produto[], column: SortColumn, direction: string): Produ
 
 function matches(produto: Produto, term: string, pipe: PipeTransform) {
   return produto.name.toLowerCase().includes(term.toLowerCase())
-    || produto.description.toLowerCase().includes(term.toLowerCase())
-    || produto.status.toLowerCase().includes(term.toLowerCase());
+    || produto.description.toLowerCase().includes(term.toLowerCase());
 }
 
 @Injectable({ providedIn: 'root' })

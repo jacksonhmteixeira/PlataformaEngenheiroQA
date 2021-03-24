@@ -43,19 +43,5 @@ export class ListaProdutoComponent implements OnInit {
 
     this.service.sortColumn = column;
     this.service.sortDirection = direction;
-  }
-
-  adicionandoNoArray(){
-    PRODUTOS.push( {
-      id: 4,
-      name: 'Controle',
-      category: CATEGORIAS[6],
-      description: 'Descubra uma experiência de jogos mais profunda e altamente imersiva1 com o novo e inovador controle do PS5™ .',
-      status: 'Ativo',
-      urlImage: '../../../assets/controle.png',
-      value: 9870,
-      percentageCommission: 80
-    });
-      console.log(PRODUTOS)
-  }
+  }    
 }
