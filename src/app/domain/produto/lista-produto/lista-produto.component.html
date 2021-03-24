@@ -12,18 +12,18 @@
                 <label for="produto">Produto:</label>
                 <select class="form-control" id="produto">
                     <option selected>Selecione...</option>
-                    <option>Curso Completo de Teste Automatizado</option>
-                    <option>Curso Completo de Teste de Software</option>
-                    <option>Curso Completo de Teste Funcional</option>
+                    <option *ngFor="let produto of produtos" value={{produto.id}}>
+                        {{produto.name}}
+                    </option>
                 </select>
             </div>
             <div class="mb-3 col-md-6 form-group">
                 <label for="categoria">Categoria:</label>
                 <select class="form-control" id="categoria">
                     <option selected>Selecione...</option>
-                    <option>E-book</option>
-                    <option>Curso</option>
-                    <option>Arquivo</option>
+                    <option *ngFor="let categoria of categorias" value={{categoria.id}}>
+                        {{categoria.categoria}}
+                    </option>
                 </select>
             </div>
         </div>
@@ -32,7 +32,7 @@
             <button class="btn btn-warning"><i class="material-icons small">auto_fix_normal</i>
                 LIMPAR FILTRO
             </button>
-            <button class="btn btn-success ml-2">
+            <button class="btn btn-success ml-2" (click)="adicionandoNoArray()">
                 <i class="material-icons small">filter_alt</i>
                 PESQUISAR
             </button>
@@ -79,7 +79,7 @@
                         </div>
                     </td>
                     <td>
-                        <ngb-highlight [result]="produto.category" [term]="service.searchTerm"></ngb-highlight>
+                        <ngb-highlight [result]="produto.category.categoria" [term]="service.searchTerm"></ngb-highlight>
                     </td>
                     <td>
                         {{produto.value}} R$

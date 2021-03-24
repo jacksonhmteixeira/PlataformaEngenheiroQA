@@ -1,11 +1,12 @@
-import { Produto } from './produto';
+import { CATEGORIAS } from './categorias';
+import { Produto } from '../domain/produto/produto';
 
-export const PRODUTO: Produto[] = [
+export const PRODUTOS: Produto[] = [
     {
         id: 1,
         name: 'Fone de ouvido AKG K414 P preto',
-        category: 'Acessório',
-        description: 'Os K414 P são fones de ouvido leves tipo fechado que proporcionam som fabuloso e excelente proteção contra ruído ambiente. Usando o mecanismo único de eixo-3D, eles se dobram dentro de uma pequena bag que pode ser levada a qualquer lugar. Bag de transporte incluída!',
+        category: CATEGORIAS[6],
+        description: 'Os K414 P são fones de ouvido leves tipo...',
         status: 'Ativo',
         urlImage: '../../../assets/Fone de Ouvido.png',
         value: 5678,
@@ -14,7 +15,7 @@ export const PRODUTO: Produto[] = [
     {
         id: 2,
         name: 'Playstation 4',
-        category: 'Acessório',
+        category: CATEGORIAS[1],
         description: 'Mais leve e mais fino, o sistema PlayStation 4 tem disco rígido de 1TB para tudo o que há de melhor em jogos, músicas e muito mais!',
         status: 'Ativo',
         urlImage: '../../../assets/playstation-4.png',
@@ -24,7 +25,7 @@ export const PRODUTO: Produto[] = [
     {
         id: 3,
         name: 'Controle',
-        category: 'Acessório',
+        category: CATEGORIAS[6],
         description: 'Descubra uma experiência de jogos mais profunda e altamente imersiva1 com o novo e inovador controle do PS5™ .',
         status: 'Ativo',
         urlImage: '../../../assets/controle.png',
@@ -32,3 +33,8 @@ export const PRODUTO: Produto[] = [
         percentageCommission: 80
     }
 ];
+
+
+
+
+

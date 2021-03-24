@@ -1,7 +1,9 @@
+import { Categoria } from '../../dados/categorias';
+
 export class Produto {
   id: number;
   name: string;
-  category: string;
+  category: Categoria;
   description: string;
   status: string;
   urlImage: string;

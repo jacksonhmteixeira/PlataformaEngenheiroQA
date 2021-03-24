@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { NovoProdutoComponent } from './novo-produto/novo-produto.component';
-import { ProdutoComponent } from './produto.component';
+import { ListaProdutoComponent } from './lista-produto/lista-produto.component';
 
 const ProdutosRoutes = [
-    { path: '', component: ProdutoComponent },
+    { path: '', component: ListaProdutoComponent },
     { path: 'novo', component: NovoProdutoComponent }
 ];
 

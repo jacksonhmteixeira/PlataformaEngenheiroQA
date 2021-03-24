@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
 import { AuthService } from 'src/app/login/auth.service';
 import { Produto } from '../produto/produto';
-import { PRODUTO } from '../produto/produtos';
+import { PRODUTOS } from '../../dados/produtos';
 
 
 
@@ -41,7 +41,7 @@ export class MercadoComponent implements OnInit {
   }
 
   search(text: string, pipe: PipeTransform): Produto[] {
-    return PRODUTO.filter(produto => {
+    return PRODUTOS.filter(produto => {
       const term = text.toLowerCase();
       return produto.name.toLowerCase().includes(term);
     });
