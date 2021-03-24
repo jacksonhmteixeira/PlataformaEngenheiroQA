@@ -21,6 +21,7 @@ import { UsuarioModule } from './domain/usuario/usuario.module'
 import { LoginModule } from './login/login.module'
 import { SaldoModule } from './domain/saldo/saldo.module'
 import { ProdutoModule } from './domain/produto/produto.module'
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [

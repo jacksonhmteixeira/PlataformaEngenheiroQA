@@ -3,22 +3,23 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { AppRouting } from "src/app/app.router";
 import { ProdutoComponent } from "./produto.component";
 import { SortableProduto } from "./sortable.directive";
+import { ProdutoRoutingModule } from './produto-routing.module';
+import { NovoProdutoComponent } from './novo-produto/novo-produto.component'
+import { RouterModule } from '@angular/router';
 
 @NgModule({
-    declarations: [ProdutoComponent, SortableProduto],
+    declarations: [ProdutoComponent, SortableProduto, NovoProdutoComponent],
     exports: [ProdutoComponent],
     imports: [
-        BrowserModule,
         CommonModule,
+        ProdutoRoutingModule,
+        RouterModule,
         FormsModule,
-        ReactiveFormsModule,
         NgbModule,
-        AppRouting
-    ],
-    bootstrap: [ProdutoComponent]
+        ReactiveFormsModule
+    ]
 })
 export class ProdutoModule {
 

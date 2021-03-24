@@ -18,7 +18,9 @@
         </div>
         <hr>
     </div>
-
+    <div class="d-flex justify-content-start">
+        <button class="btn btn-success mb-3" [routerLink]="['/mercado/novo']">Criar Mercado</button>
+    </div>
     <div class="wrapper">
         <div *ngFor="let produto of produto$ | async">
             <div class="card align-center" style="width: 100%;">

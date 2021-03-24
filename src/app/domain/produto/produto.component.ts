@@ -3,13 +3,13 @@ import { SortableProduto, SortEvent } from './sortable.directive';
 import { ProdutoService } from './produto.service'
 import { Produto } from './produto';
 import { Observable } from 'rxjs';
-import { DecimalPipe } from '@angular/common';
+import { CommonModule, DecimalPipe } from '@angular/common';
 
 @Component({
   selector: 'app-produto',
   templateUrl: './produto.component.html',
   styleUrls: ['./produto.component.css'],
-  providers: [ProdutoService, DecimalPipe]
+  providers: [ ProdutoService, DecimalPipe ]
 })
 export class ProdutoComponent implements OnInit {
 
