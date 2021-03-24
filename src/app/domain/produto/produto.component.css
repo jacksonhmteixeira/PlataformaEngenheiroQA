@@ -4,3 +4,10 @@
     background-color: #e9ecef;
     border-radius: .25rem;
 }
+
+.limit-25-caracter {
+    max-width: 50ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
