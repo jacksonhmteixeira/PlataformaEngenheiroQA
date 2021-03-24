@@ -15,17 +15,7 @@ const AppRoutes: Routes = [
     { path: '', redirectTo: 'login', pathMatch: 'full' },
     { path: 'login', component: LoginComponent },
     { path: 'painel', component: PainelComponent, canActivate: [AuthGuard] },
-    {
-        path: 'mercado',
-        component: MercadoComponent,
-        canActivate: [AuthGuard], 
-        children: [
-            {
-                path: 'novo',
-                component: UsuarioComponent
-            }
-        ],
-    },
+    { path: 'mercado', component: MercadoComponent, canActivate: [AuthGuard] },
     { path: 'afiliado', component: MeusAfiliadosComponent, canActivate: [AuthGuard] },
     {
         path: 'produto',

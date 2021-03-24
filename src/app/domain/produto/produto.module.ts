@@ -10,7 +10,11 @@ import { NovoProdutoComponent } from './novo-produto/novo-produto.component'
 import { RouterModule } from '@angular/router';
 
 @NgModule({
-    declarations: [ProdutoComponent, SortableProduto, NovoProdutoComponent],
+    declarations: [
+        ProdutoComponent,
+        SortableProduto,
+        NovoProdutoComponent
+    ],
     exports: [ProdutoComponent],
     imports: [
         CommonModule,

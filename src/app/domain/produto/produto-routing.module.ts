@@ -1,22 +1,15 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { LoginComponent } from 'src/app/login/login.component';
-import { UsuarioComponent } from '../usuario/usuario.component';
+import { RouterModule } from '@angular/router';
+import { NovoProdutoComponent } from './novo-produto/novo-produto.component';
 import { ProdutoComponent } from './produto.component';
 
-const routes: Routes = [
-    {
-        path: '',
-        component: ProdutoComponent,
-        children: [
-            { path: '', component: LoginComponent },
-            { path: 'novo', component: UsuarioComponent }
-        ],
-    },
+const ProdutosRoutes = [
+    { path: '', component: ProdutoComponent },
+    { path: 'novo', component: NovoProdutoComponent }
 ];
 
 @NgModule({
-    imports: [RouterModule.forChild(routes)],
+    imports: [RouterModule.forChild(ProdutosRoutes)],
     exports: [RouterModule],
 })
 export class ProdutoRoutingModule { }
