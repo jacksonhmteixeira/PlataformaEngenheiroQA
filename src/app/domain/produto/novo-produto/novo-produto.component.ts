@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DadosGeraisComponent } from './dados-gerais/dados-gerais.component';
 
 @Component({
   selector: 'app-novo-produto',
