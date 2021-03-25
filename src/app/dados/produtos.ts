@@ -8,7 +8,7 @@ export const PRODUTOS: Produto[] = [
         name: 'Fone de ouvido AKG K414 P preto',
         category: CATEGORIAS[6],
         description: 'Os K414 P são fones de ouvido leves tipo...',
-        status: STATUS[1],
+        status: STATUS[0],
         urlImage: '../../../assets/Fone de Ouvido.png',
         value: 5678,
         percentageCommission: 80

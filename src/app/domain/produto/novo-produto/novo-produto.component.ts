@@ -11,4 +11,6 @@ export class NovoProdutoComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  active = 1;
+
 }

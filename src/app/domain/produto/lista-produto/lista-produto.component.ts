@@ -4,8 +4,7 @@ import { ProdutoService } from '../produto.service'
 import { Produto } from '../produto';
 import { Observable } from 'rxjs';
 import { DecimalPipe } from '@angular/common';
-import { Categoria, CATEGORIAS } from '../../../dados/categorias';
-import { PRODUTOS } from 'src/app/dados/produtos';
+import { Categoria } from '../../../dados/categorias';
 
 @Component({
   selector: 'app-produto',
@@ -43,5 +42,5 @@ export class ListaProdutoComponent implements OnInit {
 
     this.service.sortColumn = column;
     this.service.sortDirection = direction;
-  }    
+  }
 }

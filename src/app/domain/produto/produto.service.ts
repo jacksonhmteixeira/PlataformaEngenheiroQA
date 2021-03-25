@@ -47,7 +47,7 @@ export class ProdutoService {
 
   private _state: State = {
     page: 1,
-    pageSize: 4,
+    pageSize: 2,
     searchTerm: '',
     sortColumn: '',
     sortDirection: ''

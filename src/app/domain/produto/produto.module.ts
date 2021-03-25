@@ -7,6 +7,7 @@ import { SortableProduto } from "./sortable.directive";
 import { ProdutoRoutingModule } from './produto-routing.module';
 import { NovoProdutoComponent } from './novo-produto/novo-produto.component'
 import { RouterModule } from '@angular/router';
+import { BrowserModule } from '@angular/platform-browser';
 
 @NgModule({
     declarations: [

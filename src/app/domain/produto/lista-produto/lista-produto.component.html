@@ -75,9 +75,6 @@
                     <th scope="row">{{ produto.id }}</th>
                     <td>
                         <ngb-highlight [result]="produto.name" [term]="service.searchTerm"></ngb-highlight>
-                        <div>
-                            <small class="text-muted"><p class="limit-25-caracter">{{ produto.description }}</p></small>
-                        </div>
                     </td>
                     <td>
                         <ngb-highlight [result]="produto.category.categoria" [term]="service.searchTerm"></ngb-highlight>
@@ -89,9 +86,11 @@
                         {{produto.percentageCommission}} %
                     </td>
                     <td>
-                        <span class="badge rounded-pill bg-success mt-2">
-                            <ngb-highlight [result]="produto.status.status" [term]="service.searchTerm">
-                            </ngb-highlight>
+                        <span *ngIf="produto.status.id == 1" class="badge text-white rounded-pill bg-success mt-2">
+                            {{produto.status.status}}
+                        </span>
+                        <span *ngIf="produto.status.id == 2" class="badge text-white rounded-pill bg-danger mt-2">
+                            {{produto.status.status}}
                         </span>
                     </td>
                     <td>
