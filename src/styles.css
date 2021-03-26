@@ -28,6 +28,7 @@
 @import '~bootstrap/scss/variables';
 @import '~bootstrap/scss/mixins';
 @import '~ngx-toastr/toastr-bs4-alert';
+
 .body-content {
     padding-top: 65px;
     padding-right: 10px;

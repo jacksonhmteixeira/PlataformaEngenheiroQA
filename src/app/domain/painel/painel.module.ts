@@ -3,6 +3,7 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { AppRouting } from "src/app/app.router";
 import { PainelComponent } from "./painel.component";
 import { ChartsModule } from 'ng2-charts';
+import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { ChartsModule } from 'ng2-charts';
         AppRouting,
         FormsModule,
         ReactiveFormsModule,
-        ChartsModule
+        ChartsModule,
+        NgbModule
     ],
 
     bootstrap: [PainelComponent]

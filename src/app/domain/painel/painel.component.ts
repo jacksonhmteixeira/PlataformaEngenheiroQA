@@ -8,26 +8,26 @@ import { Color, Label } from "ng2-charts";
   styleUrls: ['./painel.component.css']
 })
 
-export class PainelComponent {
+export class PainelComponent implements OnInit{
   public lineChartData: ChartDataSets[] = [
-    { data: [65, 59, 80, 81, 56, 55, 40], label: "Series A" }
+    { data: [0, 0, 40.90, 70, 60, 100, 80], label: "Últimos 7 Dias" }
   ];
   public lineChartLabels: Label[] = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July"
+    "19/10",
+    "20/10",
+    "21/10",
+    "22/10",
+    "23/10",
+    "24/10",
+    "25/10"
   ];
-  public lineChartOptions: ChartOptions & { annotation: any } = {
-    responsive: true
+  public lineChartOptions: ChartOptions  = {
+responsive: true
   };
   public lineChartColors: Color[] = [
     {
-      borderColor: "black",
-      backgroundColor: "rgba(255,0,0,0.3)"
+      borderColor: "#343A40",
+      backgroundColor: "rgba(22,160,133,0.5)"
     }
   ];
   public lineChartLegend = true;

@@ -14,10 +14,14 @@
   <div class="div-card-4 mb-2">
     <div class="card bg-dark text-white">
       <div class="ml-3 mt-2 mr-3 mb-1">
-        <h5><b>Hoje: <span class="text-success">0,00 R$</span></b></h5>
-        <p>Ontem: <b>0,00 R$</b></p>
-        <h5><b>Este Mês: <span class="text-success">0,00 R$</span></b></h5>
-        <p>Mês Passado: <b>0,00 R$</b></p>
+        <div  ngbTooltip="Valores de vendas recebidas hoje.">
+          <h5><b>Hoje: <span class="text-success">0,00 R$</span></b></h5>
+          <p>Ontem: <b>0,00 R$</b></p>
+        </div>
+        <div ngbTooltip="Valores de vendas recebidas este mês.">
+          <h5><b>Este Mês: <span class="text-success">0,00 R$</span></b></h5>
+          <p>Mês Passado: <b>0,00 R$</b></p>
+        </div>
       </div> 
     </div>
     <div class="card bg-warning text-white"> 
@@ -45,7 +49,7 @@
   <div class="split-in-half">
     <div class="card card-body">
       <div style="display: block;">
-        <canvas baseChart width="400" height="400"
+        <canvas baseChart
           [datasets]="lineChartData"
           [labels]="lineChartLabels"
           [options]="lineChartOptions"
