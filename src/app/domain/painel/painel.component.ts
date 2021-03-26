@@ -8,8 +8,19 @@ import { Component, OnInit } from '@angular/core';
 export class PainelComponent implements OnInit {
 
   constructor() { }
-
-  ngOnInit(): void {
+  public barChartOptions = {
+    scaleShowVerticalLines: false,
+    responsive: true
+  };
+  public barChartLabels = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];
+  public barChartType = 'bar';
+  public barChartLegend = true;
+  public barChartData = [
+    { data: [28, 48, 40, 19, 86, 27, 100], label: 'Series B' }
+  ];
+  ngOnInit() {
   }
-
 }
+
+
+
