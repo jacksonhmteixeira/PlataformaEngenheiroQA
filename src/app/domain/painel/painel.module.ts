@@ -6,14 +6,16 @@ import { ChartsModule } from 'ng2-charts';
 
 
 @NgModule({
-    declarations: [ PainelComponent ],
-    exports: [ PainelComponent ],
+    declarations: [PainelComponent],
+    exports: [PainelComponent],
     imports: [
         AppRouting,
         FormsModule,
         ReactiveFormsModule,
         ChartsModule
-    ]
+    ],
+
+    bootstrap: [PainelComponent]
 })
 export class PainelModule {
 

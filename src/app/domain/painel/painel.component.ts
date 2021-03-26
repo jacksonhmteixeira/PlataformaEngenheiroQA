@@ -1,26 +1,44 @@
 import { Component, OnInit } from '@angular/core';
+import { ChartDataSets, ChartOptions } from "chart.js";
+import { Color, Label } from "ng2-charts";
 
 @Component({
   selector: 'app-painel',
   templateUrl: './painel.component.html',
   styleUrls: ['./painel.component.css']
 })
-export class PainelComponent implements OnInit {
 
-  constructor() { }
-  public barChartOptions = {
-    scaleShowVerticalLines: false,
+export class PainelComponent {
+  public lineChartData: ChartDataSets[] = [
+    { data: [65, 59, 80, 81, 56, 55, 40], label: "Series A" }
+  ];
+  public lineChartLabels: Label[] = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July"
+  ];
+  public lineChartOptions: ChartOptions & { annotation: any } = {
     responsive: true
   };
-  public barChartLabels = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];
-  public barChartType = 'bar';
-  public barChartLegend = true;
-  public barChartData = [
-    { data: [28, 48, 40, 19, 86, 27, 100], label: 'Series B' }
+  public lineChartColors: Color[] = [
+    {
+      borderColor: "black",
+      backgroundColor: "rgba(255,0,0,0.3)"
+    }
   ];
-  ngOnInit() {
-  }
+  public lineChartLegend = true;
+  public lineChartType = "line";
+  public lineChartPlugins = [];
+
+  constructor() { }
+
+  ngOnInit() { }
 }
+
 
 
 
