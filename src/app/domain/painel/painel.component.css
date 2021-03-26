@@ -13,3 +13,10 @@
 .jumbotron-height-550 {
     height: 550px;
 }
+
+.div-card-4{
+    display: grid;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+}

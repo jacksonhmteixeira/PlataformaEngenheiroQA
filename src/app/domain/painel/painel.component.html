@@ -1,5 +1,5 @@
 <div class="body-content">
-  <div class="jumbotron text-center">
+  <!-- <div class="jumbotron text-center">
     <div class="alert alert-success" role="alert">
       <h2>Bem-vindo <a href="/">Jackson</a>, se diverta com a melhor plataforma de afiliados!</h2>
     </div>
@@ -9,10 +9,42 @@
     <hr>
     <p>Para ter sucesso, compartilhe seu produto para seus potenciais clientes.</p>
     <a class="btn btn-success" [routerLink]="['/produto']" role="button">CRIE AGORA SEU PRODUTO</a>
-  </div>
+  </div> -->
 
+  <div class="div-card-4 mb-2">
+    <div class="card bg-light">
+      <div class="ml-3 mt-2 mr-3 mb-1">
+        <h5><b>Hoje: <span class="text-success">0,00 R$</span></b></h5>
+        <p>Ontem: <b>0,00 R$</b></p>
+        <h5><b>Este Mês: <span class="text-success">0,00 R$</span></b></h5>
+        <p>Mês Passado: <b>0,00 R$</b></p>
+      </div> 
+    </div>
+    <div class="card bg-warning text-white"> 
+      <div class="ml-3 mt-2 mr-3 mb-1">
+        <i class="material-icons md-48">local_atm</i>
+        <h4 class="d-flex justify-content-end"><b>R$ 356.565,32</b></h4>
+        <h6 class="d-flex justify-content-end">Saldo Pendente</h6>
+      </div>
+    </div>
+    <div class="card bg-success text-white">
+      <div class="ml-3 mt-2 mr-3 mb-1">
+        <i class="material-icons md-48">local_atm</i>
+        <h4 class="d-flex justify-content-end"><b>R$ 356.565,32</b></h4>
+        <h6 class="d-flex justify-content-end">Saldo Disponível</h6>
+      </div> 
+    </div>
+    <div class="card bg-info bg-gradient text-white">
+      <div class="ml-3 mt-2 mr-3 mb-1">
+        <i class="material-icons md-48">local_atm</i>
+        <h4 class="d-flex justify-content-end"><b>R$ 356.565,32</b></h4>
+        <h6 class="d-flex justify-content-end">Saldo Total</h6>
+      </div> 
+    </div>
+  </div>
+  
   <div class="split-in-half">
-    <div class="jumbotron jumbotron-height-550">
+    <div class="card card-body jumbotron-height-550">
       <div class="text-center">
         <h3><b>SUAS COMISSÕES</b></h3>
       </div>
@@ -30,7 +62,7 @@
             <p>Ontem: 25 Produto(s)</p>
           </div>
           <div class="col-5">
-            <h5>42 Produto(s)</h5>
+            <h5 class="text-success">42 Produto(s)</h5>
           </div>
         </div>
         <div class="col-12 pt-2 row">
@@ -58,7 +90,7 @@
       </div>
     </div>
 
-    <div class="jumbotron jumbotron-height-550">
+    <div class="card card-body jumbotron-height-550">
       <div class="text-center">
         <h3><b>MÉTRICAS DE VENDAS</b></h3>
       </div>
@@ -114,7 +146,7 @@
     </div>
   </div>
 
-  <div class="jumbotron jumbotron-height-550">
+  <div class="card card-body mt-2 jumbotron-height-550">
     <div class="text-center">
       <h3><b>PRODUTOS</b></h3>
     </div>
