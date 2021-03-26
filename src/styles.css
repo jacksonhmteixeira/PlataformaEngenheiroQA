@@ -16,18 +16,18 @@
     font-size: 48px;
 }
 
-.icon-pt{
+.icon-pt {
     margin-top: 6px;
 }
 
 /* TOAST */
+
 @import '~ngx-toastr/toastr';
 @import '~ngx-toastr/toastr-bs4-alert';
 @import '~bootstrap/scss/functions';
 @import '~bootstrap/scss/variables';
 @import '~bootstrap/scss/mixins';
 @import '~ngx-toastr/toastr-bs4-alert';
-
 .body-content {
     padding-top: 65px;
     padding-right: 10px;
@@ -43,4 +43,25 @@
     .body-content {
         padding-left: 10px;
     }
+}
+
+.btn-theme-default {
+    background-color: #16a085;
+    border-color: #16a085;
+    color: white;
+}
+
+.btn-theme-default:hover {
+    background-color: #12856e;
+    border-color: #12856e;
+    color: white;
+}
+
+.color-default{
+    color: #12856e;
+}
+
+.table-theme-default {
+    color: #fff;
+    background-color: #16a085;
 }

@@ -11,9 +11,9 @@
   </div>
   <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
     <li [ngbNavItem]="1">
-      <a ngbNavLink>Dados Principais</a>
+      <a class="text-color-default" ngbNavLink>Dados Principais</a>
       <ng-template ngbNavContent>
-        <div class="card">
+        <div class="tab-extern">
           <div class="card-body">
             <app-dados-gerais></app-dados-gerais>
           </div>
@@ -21,13 +21,13 @@
       </ng-template>
     </li>
     <li [ngbNavItem]="2">
-      <a ngbNavLink>Two</a>
+      <a ngbNavLink>Formato</a>
       <ng-template ngbNavContent>
         
       </ng-template>
     </li>
     <li [ngbNavItem]="3">
-      <a ngbNavLink>Three</a>
+      <a ngbNavLink>Precificação</a>
       <ng-template ngbNavContent>
         
       </ng-template>

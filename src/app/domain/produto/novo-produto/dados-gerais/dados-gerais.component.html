@@ -2,11 +2,15 @@
     <div class="form-group">
         <label for="nomeProduto">Nome do Produto:</label>
         <input type="text" class="form-control" id="nomeProduto" aria-describedby="nomeProdutoAviso"
-            placeholder="Digite o nome do produto...">
-        <small id="nomeProdutoAviso" class="form-text text-muted">Informe um nome atraente para seus clientes.</small>
+            placeholder="Informe um nome atraente para seus clientes">
+        <div class="mb-3">
+            <label for="descricaoProduto" class="form-label">Descrição:</label>
+            <textarea class="form-control" id="descricaoProduto" rows="3"
+                placeholder="Faça uma descrição breve e clara do seu produto."></textarea>
+        </div>
     </div>
     <div class=" d-flex justify-content-end">
         <button type="submit" class="btn btn-secondary" [routerLink]="['/produto']">Cancelar</button>
-        <button type="submit" class="btn btn-primary ml-2">Prosseguir</button>
+        <button type="submit" class="btn btn-theme-default ml-2" (click)="prosseguirDadosGerais()">Prosseguir</button>
     </div>
 </form>

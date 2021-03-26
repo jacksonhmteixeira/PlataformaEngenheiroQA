@@ -3,7 +3,8 @@ import { DadosGeraisComponent } from './dados-gerais/dados-gerais.component';
 
 @Component({
   selector: 'app-novo-produto',
-  templateUrl: './novo-produto.component.html'
+  templateUrl: './novo-produto.component.html',
+  styleUrls: ['./novo-produto.component.css']
 })
 export class NovoProdutoComponent implements OnInit {
 
@@ -13,5 +14,9 @@ export class NovoProdutoComponent implements OnInit {
   }
 
   active = 1;
+
+  prosseguirProximaAba(numeroAba: number) {
+    this.active = numeroAba;
+  }
 
 }
