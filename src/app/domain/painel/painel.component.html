@@ -27,39 +27,31 @@
     <div class="card bg-warning text-white"> 
       <div class="ml-3 mt-2 mr-3 mb-1">
         <i class="material-icons md-48">local_atm</i>
-        <h4 class="d-flex justify-content-end"><b>R$ 356.565,32</b></h4>
+        <h4 class="d-flex justify-content-end"><b>R$ 0,00</b></h4>
         <h6 class="d-flex justify-content-end">Saldo Pendente</h6>
       </div>
     </div>
     <div class="card bg-success text-white">
       <div class="ml-3 mt-2 mr-3 mb-1">
         <i class="material-icons md-48">local_atm</i>
-        <h4 class="d-flex justify-content-end"><b>R$ 356.565,32</b></h4>
+        <h4 class="d-flex justify-content-end"><b>R$ 0,00</b></h4>
         <h6 class="d-flex justify-content-end">Saldo Disponível</h6>
       </div> 
     </div>
     <div class="card bg-info bg-gradient text-white">
       <div class="ml-3 mt-2 mr-3 mb-1">
         <i class="material-icons md-48">local_atm</i>
-        <h4 class="d-flex justify-content-end"><b>R$ 356.565,32</b></h4>
+        <h4 class="d-flex justify-content-end"><b>R$ 0,00</b></h4>
         <h6 class="d-flex justify-content-end">Saldo Total</h6>
       </div> 
     </div>
   </div>
   <div class="split-in-half">
     <div class="card card-body">
-      <div style="display: block;">
-        <canvas baseChart
-          [datasets]="lineChartData"
-          [labels]="lineChartLabels"
-          [options]="lineChartOptions"
-          [colors]="lineChartColors"
-          [legend]="lineChartLegend"
-          [chartType]="lineChartType"
-          [plugins]="lineChartPlugins">
-        </canvas>
-      </div>
+      <app-grafico-sete-dias></app-grafico-sete-dias>
     </div>
-    <div class="card card-body">Jackson</div>
+    <div class="card card-body">
+      <app-grafico-trinta-dias></app-grafico-trinta-dias>
+    </div>
   </div>
 </div>

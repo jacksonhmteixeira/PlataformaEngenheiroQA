@@ -10,7 +10,15 @@
         </div>
     </div>
     <div class=" d-flex justify-content-end">
-        <button type="submit" class="btn btn-secondary" [routerLink]="['/produto']">Cancelar</button>
-        <button type="submit" class="btn btn-theme-default ml-2" (click)="prosseguirDadosGerais()">Prosseguir</button>
+        <button type="submit" class="btn btn-secondary" [routerLink]="['/produto']">
+            <i class="material-icons small">block</i>
+            Cancelar
+        </button>
+        <button type="submit" class="btn btn-theme-default ml-2" (click)="prosseguirDadosGerais()">
+            Prosseguir
+            <span class="material-icons small">
+                navigate_next
+            </span>
+        </button>
     </div>
 </form>
