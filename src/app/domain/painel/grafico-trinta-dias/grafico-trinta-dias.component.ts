@@ -1,6 +1,7 @@
 import { stringify } from "@angular/compiler/src/util";
 import { Component, OnInit } from "@angular/core";
 import { ChartDataSets, ChartOptions } from "chart.js";
+import * as moment from "moment";
 import { Color, Label } from "ng2-charts";
 
 @Component({
@@ -9,21 +10,8 @@ import { Color, Label } from "ng2-charts";
 })
 export class GraficoTrintaDiasComponent {
 
-    adicionando(i: number) {
-        let myDate = new Date(new Date().getTime() - (i * 24 * 60 * 60 * 1000))
-
-        const teste = moment().subtract(10, "days").format('DD/MM/YYYY');
-
-        var dia = myDate.getDate();
-        var mes = myDate.getMonth() + 1;
-        
-        if(dia < 1) mes = mes - 1; 
-
-        if (dia < 10) var diaConcatenado = "0" + String(dia);
-        if (mes < 10) var mesConcatenado = "0" + String(mes);
-
-
-        return (diaConcatenado + "/" + mesConcatenado);
+    subtraindoData(i: number) {
+        return moment().subtract('days', i).format('DD-MM');;
     }
 
     public lineChartData: ChartDataSets[] = [
@@ -31,13 +19,13 @@ export class GraficoTrintaDiasComponent {
     ];
 
     public lineChartLabels: Label[] = [
-        this.adicionando(10),
-        this.adicionando(5),
-        this.adicionando(4),
-        this.adicionando(3),
-        this.adicionando(2),
-        this.adicionando(1),
-        this.adicionando(0)
+        this.subtraindoData(10),
+        this.subtraindoData(5),
+        this.subtraindoData(4),
+        this.subtraindoData(3),
+        this.subtraindoData(2),
+        this.subtraindoData(1),
+        this.subtraindoData(0)
     ];
 
 
