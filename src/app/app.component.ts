@@ -12,27 +12,32 @@ const MENU: Menu[] = [
   {
     rota: '/painel',
     icon: 'insert_chart',
-    label: 'Painel'
+    label: 'Painel',
+    id: 'menuPainel'
   },
   {
     rota: '/mercado',
     icon: 'store_mall_directory',
-    label: 'Mercado'
+    label: 'Mercado',
+    id: 'menuMercado'
   },
   {
     rota: '/afiliado',
     icon: 'people_alt',
-    label: 'Meus Afiliados'
+    label: 'Meus Afiliados',
+    id: 'menuMeusAfiliados'
   },
   {
     rota: '/produto',
     icon: 'widgets',
-    label: 'Produtos'
+    label: 'Produtos',
+    id: 'menuProduto'
   },
   {
     rota: '/saldo',
     icon: 'attach_money',
-    label: 'Saldo'
+    label: 'Saldo',
+    id: 'menuSaldo'
   }
 ];
 

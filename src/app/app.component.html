@@ -46,7 +46,7 @@
     <ul class="components">
       <div *ngFor="let menu of menus$ | async" >
         <li routerLinkActive="active">
-          <a [routerLink]="[menu.rota]" [term]="filter.value">
+          <a [routerLink]="[menu.rota]" [term]="filter.value" id="{{menu.id}}">
             <div class="row">
               <div class="col-1">
                 <i class="material-icons md-18 icon-pt">{{menu.icon}}</i>
