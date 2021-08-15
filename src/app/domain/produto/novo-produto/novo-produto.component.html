@@ -9,30 +9,5 @@
   <div class="mb-3">
     <h4>Cadastrar Produto</h4>
   </div>
-  <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
-    <li [ngbNavItem]="1">
-      <a class="text-color-default" ngbNavLink>Dados Principais</a>
-      <ng-template ngbNavContent>
-        <div class="tab-extern">
-          <div class="card-body">
-            <app-dados-gerais></app-dados-gerais>
-          </div>
-        </div>
-      </ng-template>
-    </li>
-    <li [ngbNavItem]="2">
-      <a ngbNavLink>Formato</a>
-      <ng-template ngbNavContent>
-        
-      </ng-template>
-    </li>
-    <li [ngbNavItem]="3">
-      <a ngbNavLink>Precificação</a>
-      <ng-template ngbNavContent>
-        
-      </ng-template>
-    </li>
-  </ul>
-
-  <div [ngbNavOutlet]="nav" class="mt-2"></div>
+ 
 </div>

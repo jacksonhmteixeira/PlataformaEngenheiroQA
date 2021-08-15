@@ -32,6 +32,26 @@ export const PRODUTOS: Produto[] = [
         urlImage: '../../../assets/controle.png',
         value: 9870,
         percentageCommission: 80
+    },
+    {
+        id: 3,
+        name: 'Controle',
+        category: CATEGORIAS[6],
+        description: 'Descubra uma experiência de jogos mais profunda e altamente imersiva1 com o novo e inovador controle do PS5™ .',
+        status: STATUS[1],
+        urlImage: '../../../assets/controle.png',
+        value: 9870,
+        percentageCommission: 80
+    },
+    {
+        id: 3,
+        name: 'Controle',
+        category: CATEGORIAS[6],
+        description: 'Descubra uma experiência de jogos mais profunda e altamente imersiva1 com o novo e inovador controle do PS5™ .',
+        status: STATUS[1],
+        urlImage: '../../../assets/controle.png',
+        value: 9870,
+        percentageCommission: 80
     }
 ];
 

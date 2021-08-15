@@ -14,12 +14,39 @@ export class GraficoTrintaDiasComponent {
         return moment().subtract('days', i).format('DD-MM');;
     }
 
+    retornandoNumero() {
+        return Math.random() * 100;
+    }
+
     public lineChartData: ChartDataSets[] = [
-        { data: [0, 0, 40.90, 70, 60, 100, 80], label: "ÚLTIMOS 7 DIAS" }
+        { 
+            data: [
+                this.retornandoNumero(),
+                this.retornandoNumero(),
+                this.retornandoNumero(),
+                this.retornandoNumero(),
+                this.retornandoNumero(),
+                this.retornandoNumero(),
+                this.retornandoNumero(),
+                this.retornandoNumero(),
+                this.retornandoNumero(),
+                this.retornandoNumero(),
+                this.retornandoNumero(),
+                this.retornandoNumero(),
+                this.retornandoNumero()
+            ], 
+            label: "ÚLTIMOS 7 DIAS" 
+        }
     ];
 
     public lineChartLabels: Label[] = [
         this.subtraindoData(10),
+        this.subtraindoData(5),
+        this.subtraindoData(4),
+        this.subtraindoData(3),
+        this.subtraindoData(2),
+        this.subtraindoData(1),
+        this.subtraindoData(0),
         this.subtraindoData(5),
         this.subtraindoData(4),
         this.subtraindoData(3),

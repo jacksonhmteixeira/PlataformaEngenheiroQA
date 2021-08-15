@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { DadosGeraisComponent } from './dados-gerais/dados-gerais.component';
 
 @Component({
   selector: 'app-novo-produto',
@@ -13,10 +12,5 @@ export class NovoProdutoComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  active = 1;
-
-  prosseguirProximaAba(numeroAba: number) {
-    this.active = numeroAba;
-  }
 
 }

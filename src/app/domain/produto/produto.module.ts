@@ -7,14 +7,12 @@ import { SortableProduto } from "./sortable.directive";
 import { ProdutoRoutingModule } from './produto-routing.module';
 import { NovoProdutoComponent } from './novo-produto/novo-produto.component'
 import { RouterModule } from '@angular/router';
-import { DadosGeraisComponent } from './novo-produto/dados-gerais/dados-gerais.component';
 
 @NgModule({
     declarations: [
         ListaProdutoComponent,
         SortableProduto,
-        NovoProdutoComponent,
-        DadosGeraisComponent
+        NovoProdutoComponent
     ],
     exports: [
         ListaProdutoComponent
