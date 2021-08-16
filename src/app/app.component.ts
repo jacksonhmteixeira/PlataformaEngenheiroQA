@@ -22,12 +22,6 @@ const MENU: Menu[] = [
     id: 'menuMercado'
   },
   {
-    rota: '/afiliado',
-    icon: 'people_alt',
-    label: 'Meus Afiliados',
-    id: 'menuMeusAfiliados'
-  },
-  {
     rota: '/produto',
     icon: 'widgets',
     label: 'Produtos',

@@ -7,6 +7,7 @@ import { SortableProduto } from "./sortable.directive";
 import { ProdutoRoutingModule } from './produto-routing.module';
 import { NovoProdutoComponent } from './novo-produto/novo-produto.component'
 import { RouterModule } from '@angular/router';
+import { CKEditorModule } from 'ngx-ckeditor';
 
 @NgModule({
     declarations: [
@@ -23,7 +24,8 @@ import { RouterModule } from '@angular/router';
         RouterModule,
         FormsModule,
         NgbModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        CKEditorModule
     ]
 })
 export class ProdutoModule {

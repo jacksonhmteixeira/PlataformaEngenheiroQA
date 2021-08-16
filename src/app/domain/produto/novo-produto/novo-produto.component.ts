@@ -12,5 +12,6 @@ export class NovoProdutoComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  public editorValue: string = '';
 
 }
