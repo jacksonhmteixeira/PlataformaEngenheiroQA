@@ -9,27 +9,62 @@
   <div class="mb-3">
     <h4>Cadastrar Produto</h4>
   </div>
-  <form>
-    <div class="mb-3">
-      <label for="inputNomeProduto" class="form-label">Nome do Produto:</label>
-      <input type="text" class="form-control" id="inputNomeProduto" placeholder="Nome do Produto...">
+  <div class="card mb-3">
+    <div class="card-body">
+      <form>
+    
+        <div class="d-flex justify-content-center">
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="../../../../assets/icone-photo.png" *ngIf="!imgURL">
+            <img class="card-img-top" [src]="imgURL" *ngIf="imgURL">
+            <div class="card-body">
+              <div class="custom-file">
+                <input #file  type="file" accept='image/*' (change)="preview(file.files)" class="custom-file-input" id="inputImagemProduto">
+                <label class="custom-file-label" for="inputImagemProduto">Foto do Produto...</label>
+                <div class="invalid-feedback" *ngIf="message">{{message}}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+    
+        <div class="row mb-3">
+          <div class="col-md-8">
+            <label for="inputNomeProduto" class="form-label">Nome do Produto:</label>
+            <input type="text" class="form-control" id="inputNomeProduto" placeholder="Nome do Produto...">
+          </div>
+          <div class="col-md-4">
+            <label for="inputQuantidade" class="form-label">Quantidade:</label>
+            <input type="number" class="form-control" id="inputQuantidade" placeholder="0">
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-md-4">
+            <label for="inputPrecoCompra" class="form-label">Preço de Compra:</label>
+            <input type="text" class="form-control" id="inputPrecoCompra" placeholder="0,00 R$">
+          </div>
+          <div class="col-md-4">
+            <label for="inputPrecoVenda" class="form-label">Preço de Venda:</label>
+            <input type="text" class="form-control" id="inputPrecoVenda" placeholder="0,00 R$">
+          </div>
+          <div class="col-md-4">
+            <label for="inputFornecedor" class="form-label">Fornecedor:</label>
+            <input type="text" class="form-control" id="inputFornecedor" placeholder="Fornecedor...">
+          </div>
+        </div>
+        <label for="inputFornecedor" class="form-label">Descrição:</label>
+        <ck-editor name="editor1" [(ngModel)]="editorValue" skin="moono-lisa" language="en" [fullPage]="true"></ck-editor>
+      </form>
+      <div class="d-flex justify-content-end mt-4">
+        <button class="btn btn-theme-default ml-2" ngbTooltip="Pesquisar">
+          <i class="material-icons small">filter_alt</i>
+          Cancelar
+        </button>
+        <button class="btn btn-theme-default ml-2" ngbTooltip="Pesquisar">
+          <i class="material-icons small">filter_alt</i>
+          Salvar
+        </button>
+      </div>
     </div>
-    <div class="mb-3">
-      <label for="inputQuantidade" class="form-label">Quantidade:</label>
-      <input type="number" class="form-control" id="inputQuantidade" placeholder="0">
-    </div>
-    <div class="mb-3">
-      <label for="inputPrecoCompra" class="form-label">Preço de Compra:</label>
-      <input type="text" class="form-control" id="inputPrecoCompra" placeholder="0,00 R$">
-    </div>
-    <div class="mb-3">
-      <label for="inputPrecoVenda" class="form-label">Preço de Venda:</label>
-      <input type="text" class="form-control" id="inputPrecoVenda" placeholder="0,00 R$">
-    </div>
-    <div class="mb-3">
-      <label for="inputFornecedor" class="form-label">Fornecedor:</label>
-      <input type="text" class="form-control" id="inputFornecedor" placeholder="Fornecedor...">
-    </div>
-    <ck-editor name="editor1" [(ngModel)]="editorValue" skin="moono-lisa" language="en" [fullPage]="true"></ck-editor>
-  </form>
+  </div>
 </div>
