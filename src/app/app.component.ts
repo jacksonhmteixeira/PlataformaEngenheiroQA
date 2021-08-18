@@ -70,4 +70,8 @@ export class AppComponent {
       mostrar => this.loginON = mostrar
     );
   }
+
+  logout(){
+    this.authService.realizarLogout();
+  }
 }

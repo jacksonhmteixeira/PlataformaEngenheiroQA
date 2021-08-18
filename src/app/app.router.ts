@@ -13,7 +13,7 @@ import { SaldoComponent } from './domain/saldo/saldo.component';
 
 const AppRoutes: Routes = [
     { path: '', redirectTo: 'login', pathMatch: 'full' },
-    { path: 'login', component: LoginComponent },
+    { path: 'login', component: LoginComponent},
     { path: 'painel', component: PainelComponent, canActivate: [AuthGuard] },
     { path: 'mercado', component: MercadoComponent, canActivate: [AuthGuard] },
     { path: 'afiliado', component: MeusAfiliadosComponent, canActivate: [AuthGuard] },
