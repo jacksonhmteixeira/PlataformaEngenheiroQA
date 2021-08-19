@@ -27,15 +27,15 @@ function sort(produtos: Produto[], column: SortColumn, direction: string): Produ
     return produtos;
   } else {
     return [...produtos].sort((a, b) => {
-      const res = compare(a.name[column], b.name[column]);
+      const res = compare(a.nomeDoProduto[column], b.nomeDoProduto[column]);
       return direction === 'asc' ? res : -res;
     });
   }
 }
 
 function matches(produto: Produto, term: string, pipe: PipeTransform) {
-  return produto.name.toLowerCase().includes(term.toLowerCase())
-    || produto.description.toLowerCase().includes(term.toLowerCase());
+  return produto.nomeDoProduto.toLowerCase().includes(term.toLowerCase())
+    || produto.descricao.toLowerCase().includes(term.toLowerCase());
 }
 
 @Injectable({ providedIn: 'root' })

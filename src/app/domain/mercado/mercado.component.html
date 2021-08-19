@@ -22,13 +22,13 @@
     <div class="wrapper">
         <div *ngFor="let produto of produto$ | async">
             <div class="card align-center" style="width: 100%;">
-                <img src="{{produto.urlImage}}" class="card-img-top">
+                <img src="{{produto.imagem}}" class="card-img-top">
                 <div class="card-body">
 
-                    <h5 class="card-title" [term]="filterProduto.name">
-                        {{produto.name}}
+                    <h5 class="card-title" [term]="filterProduto.nomeDoProduto">
+                        {{produto.nomeDoProduto}}
                     </h5>
-                    <p class="card-text">{{produto.description}}</p>
+                    <p class="card-text">{{produto.descricao}}</p>
                     <ngb-rating [(rate)]="currentRate" [readonly]="readonly">
                         <ng-template let-fill="fill" let-index="index">
                             <span class="star" [class.filled]="fill === 100" [class.bad]="index < 5">&#9733;</span>

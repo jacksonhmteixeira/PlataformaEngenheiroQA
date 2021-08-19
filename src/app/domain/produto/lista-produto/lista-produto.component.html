@@ -81,17 +81,17 @@
             <tbody>
                 <tr *ngFor="let produto of produtos$ | async">
                     <td>
-                        <ngb-highlight [result]="produto.name" [term]="service.searchTerm"></ngb-highlight>
+                        <ngb-highlight [result]="produto.nomeDoProduto" [term]="service.searchTerm"></ngb-highlight>
                     </td>
                     <td>
-                        <ngb-highlight [result]="produto.category.categoria" [term]="service.searchTerm">
+                        <ngb-highlight [result]="produto.categoria.categoria" [term]="service.searchTerm">
                         </ngb-highlight>
                     </td>
                     <td>
-                        {{produto.value}} R$
+                        {{produto.precoDeCompra}} R$
                     </td>
                     <td>
-                        {{produto.percentageCommission}} %
+                        {{produto.precoDeVenda}} %
                     </td>
                     <td>
                         <span *ngIf="produto.status.id == 1" class="badge text-white rounded-pill bg-success mt-2">

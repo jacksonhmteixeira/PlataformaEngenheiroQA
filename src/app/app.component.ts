@@ -1,9 +1,7 @@
 import { Component, PipeTransform } from '@angular/core';
-
 import { DecimalPipe } from '@angular/common';
 import { FormControl } from '@angular/forms';
 import { AuthService } from './login/auth.service'
-
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
 import { Menu } from './menu.list';
@@ -26,12 +24,6 @@ const MENU: Menu[] = [
     icon: 'widgets',
     label: 'Produtos',
     id: 'menuProduto'
-  },
-  {
-    rota: '/saldo',
-    icon: 'attach_money',
-    label: 'Saldo',
-    id: 'menuSaldo'
   }
 ];
 

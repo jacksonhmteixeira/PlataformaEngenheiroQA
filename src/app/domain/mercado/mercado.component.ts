@@ -43,7 +43,7 @@ export class MercadoComponent implements OnInit {
   search(text: string, pipe: PipeTransform): Produto[] {
     return PRODUTOS.filter(produto => {
       const term = text.toLowerCase();
-      return produto.name.toLowerCase().includes(term);
+      return produto.nomeDoProduto.toLowerCase().includes(term);
     });
   }
 }
