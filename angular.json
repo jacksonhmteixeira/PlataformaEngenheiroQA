@@ -30,6 +30,9 @@
             ],
             "scripts": [
               "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ], 
+            "allowedCommonJsDependencies": [
+              "chart.js"
             ]
           },
           "configurations": {
@@ -71,6 +74,13 @@
           "configurations": {
             "production": {
               "browserTarget": "nextstar-front-new:build:production"
+            },
+            "development": {
+              "browserTarget": "nextstar-front-new:build:development"
+            },
+            "pt": {
+              "browserTarget": "nextstar-front-new:build:pt",
+              "optimization":false
             }
           }
         },
