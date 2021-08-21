@@ -72,8 +72,8 @@
                 <tr>
                     <th scope="col" sortable="name" (sort)="onSort($event)">Produto</th>
                     <th scope="col" sortable="category" (sort)="onSort($event)">Categoria</th>
-                    <th scope="col" sortable="value" (sort)="onSort($event)">Valor</th>
-                    <th scope="col" sortable="percentageCommission" (sort)="onSort($event)">Comissão (%)</th>
+                    <th scope="col" sortable="value" (sort)="onSort($event)">Valor de Compra</th>
+                    <th scope="col" sortable="percentageCommission" (sort)="onSort($event)">Valor de Venda</th>
                     <th scope="col" sortable="status" (sort)="onSort($event)">Status</th>
                     <th scope="col">Ação</th>
                 </tr>
@@ -91,7 +91,7 @@
                         {{produto.precoDeCompra}} R$
                     </td>
                     <td>
-                        {{produto.precoDeVenda}} %
+                        {{produto.precoDeVenda}} R$
                     </td>
                     <td>
                         <span *ngIf="produto.status.id == 1" class="badge text-white rounded-pill bg-success mt-2">
