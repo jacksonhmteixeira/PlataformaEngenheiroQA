@@ -11,14 +11,14 @@
     </div>
     <div class="card bg-danger text-white"> 
       <div class="ml-3 mt-2 mr-3 mb-1">
-        <i class="material-icons md-48">block</i>
+        <i class="material-icons md-36">block</i>
         <h4 class="d-flex justify-content-end"><b>0</b></h4>
         <h6 class="d-flex justify-content-end">Produtos Inativos</h6>
       </div>
     </div>
     <div class="card bg-success text-white">
       <div class="ml-3 mt-2 mr-3 mb-1">
-        <i class="material-icons md-48">check</i>
+        <i class="material-icons md-36">check</i>
         <h4 class="d-flex justify-content-end"><b>0</b></h4>
         <h6 class="d-flex justify-content-end">Produtos Ativos</h6>
       </div> 
@@ -26,7 +26,22 @@
   </div>
   <div class="split-in-half">
     <div class="card card-body">
-      <app-grafico-sete-dias></app-grafico-sete-dias>
+      <div class="d-flex justify-content-center">
+        <h4>Produtos</h4>
+      </div>
+      <div>
+        <div *ngFor="let produto of produtos | async">
+          <div class="card align-center" style="width: 100%;">
+              <img src="{{produto.imagem}}" class="card-img-top"> 
+              <div class="card-body">
+                  <h5 class="card-title">
+                      {{produto.nomeDoProduto}}
+                  </h5>
+                  <p class="card-text">{{produto.descricao}}</p>
+                  <a href="#" class="btn btn-primary">Afiliar-se agora!</a>
+              </div>
+          </div>
+      </div>
     </div>
     <div class="card card-body">
       <app-grafico-trinta-dias></app-grafico-trinta-dias>

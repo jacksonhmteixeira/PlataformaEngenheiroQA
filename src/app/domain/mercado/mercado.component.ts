@@ -7,8 +7,6 @@ import { AuthService } from 'src/app/login/auth.service';
 import { Produto } from '../produto/produto';
 import { PRODUTOS } from '../../dados/produtos';
 
-
-
 @Component({
   selector: 'app-mercado',
   templateUrl: './mercado.component.html',

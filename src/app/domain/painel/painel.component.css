@@ -7,16 +7,18 @@
 @media (min-width: 1120px) {
     .split-in-half{
         grid-template-columns: repeat(2, 1fr);
-    }    
-}
-
-.jumbotron-height-550 {
-    height: 550px;
+    }  
+    
+    .div-card-4{
+        display: grid;
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 .div-card-4{
     display: grid;
     grid-column-gap: 10px;
     grid-row-gap: 10px;
-    grid-template-columns: repeat(3, 1fr);
 }
