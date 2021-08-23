@@ -1,5 +1,5 @@
-import { Categoria } from '../../dados/categorias';
-import { Status } from '../../dados/status';
+import { Categoria } from '../categoria/categorias';
+import { Status } from '../status/status';
 
 export class Produto {
   id: number;
@@ -8,7 +8,6 @@ export class Produto {
   quantidade: number;
   precoDeCompra: number;
   precoDeVenda: number;
-  fornecedor: string;
   descricao: string;
   status: Status;
   categoria: Categoria;

@@ -1,8 +1,8 @@
 import { Injectable, PipeTransform } from '@angular/core';
 import { BehaviorSubject, Observable, of, Subject } from 'rxjs';
 import { Produto } from './produto';
-import { PRODUTOS } from '../../dados/produtos';
-import { CATEGORIAS } from '../../dados/categorias';
+import { PRODUTOS } from './produtos';
+import { CATEGORIAS } from '../categoria/categorias';
 import { DecimalPipe } from '@angular/common';
 import { debounceTime, delay, switchMap, tap } from 'rxjs/operators';
 import { SortColumn, SortDirection } from './sortable.directive';

@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
 import { AuthService } from 'src/app/login/auth.service';
 import { Produto } from '../produto/produto';
-import { PRODUTOS } from '../../dados/produtos';
+import { PRODUTOS } from '../produto/produtos';
 
 @Component({
   selector: 'app-mercado',

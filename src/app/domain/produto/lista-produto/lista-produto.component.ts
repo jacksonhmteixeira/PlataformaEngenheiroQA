@@ -4,7 +4,7 @@ import { ProdutoService } from '../produto.service'
 import { Produto } from '../produto';
 import { Observable } from 'rxjs';
 import { DecimalPipe } from '@angular/common';
-import { Categoria } from '../../../dados/categorias';
+import { Categoria } from '../../categoria/categorias';
 
 @Component({
   selector: 'app-produto',
