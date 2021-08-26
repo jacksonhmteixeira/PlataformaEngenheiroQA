@@ -17,7 +17,7 @@
                     <select class="form-control" id="produto">
                         <option selected>Selecione...</option>
                         <option *ngFor="let produto of produtos" value={{produto.id}}>
-                            {{produto.name}}
+                            {{produto.nomeDoProduto}}
                         </option>
                     </select>
                 </div>
@@ -102,50 +102,15 @@
                         </span>
                     </td>
                     <td>
-                        <button class="btn btn-warning btn-sm" ngbTooltip="Alterar">
-                            <i class="material-icons text-white mt-1 small" >edit</i>
+                        <button class="btn btn-warning btn-sm" ngbTooltip="Alterar Produto">
+                            <i class="material-icons mt-1 small md-dark" >edit</i>
                         </button>
-                        <button class="btn btn-danger btn-sm ml-2" ngbTooltip="Excluir">
-                            <i class="material-icons small mt-1">close</i>
+                        <button class="btn btn-danger btn-sm ml-2" ngbTooltip="Excluir Produto">
+                            <i class="material-icons mt-1 small md-dark">delete</i>
                         </button>
                     </td>
                 </tr>
             </tbody>
-            <tfoot>
-                <tr>
-                    <td>
-                        <ngb-pagination [collectionSize]="(total$ | async)!" [(page)]="service.page"
-                            [pageSize]="service.pageSize">
-                        </ngb-pagination>
-                    </td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>
-                        <span class="" *ngIf="service.loading$ | async">
-                            <div class="d-flex justify-content-center">
-                                <div class="spinner-border" role="status">
-                                    <span class="visually-hidden"></span>
-                                </div>
-                            </div>
-                        </span>
-                    </td>
-                    <td>
-                        <div class="d-flex justify-content-between p-2">
-                            <select class="custom-select" style="width: auto" name="pageSize"
-                                [(ngModel)]="service.pageSize">
-                                <option [ngValue]="10">10 itens por página</option>
-                                <option [ngValue]="25">25 itens por página</option>
-                                <option [ngValue]="50">50 itens por página</option>
-                                <option [ngValue]="100">100 itens por página</option>
-                            </select>
-                        </div>
-                    </td>
-                </tr>
-            </tfoot>
         </table>
-
-
     </form>
-
 </div>

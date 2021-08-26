@@ -21,7 +21,7 @@ export const PRODUTOS: Produto[] = [
         precoDeCompra: 5678,
         precoDeVenda: 3215,
         descricao: 'Os K414 P são fones de ouvido leves tipo...',
-        status: STATUS[0],
+        status: STATUS[1],
         categoria: CATEGORIAS[6]
     },{
         id: 3,
