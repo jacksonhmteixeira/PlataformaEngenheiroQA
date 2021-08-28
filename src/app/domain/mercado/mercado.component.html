@@ -6,18 +6,16 @@
         </ol>
     </nav>
 
+    <div class="mb-3">
+        <h4>Mercado</h4>
+        <small>Aqui estão todos os produtos disponíveis para venda.</small>
+    </div>
     <div>
-        <h1 class="mt-4">
-            Produtos para Afiliação
-        </h1>
-        <p class="mt-2">Escolha o melhor produto para afiliação...</p>
-        <div class="mt-1">
-            <input type="text" class="form-control" id="pesquisar_produto" placeholder="Pesquisar Produto"
-                [formControl]="filterProduto">
-        </div>
+        <input type="text" class="form-control" id="pesquisar_produto" placeholder="Pesquisar Produto"
+            [formControl]="filterProduto">
         <hr>
     </div>
-    
+
     <div class="wrapper">
         <div *ngFor="let produto of produto$ | async">
             <div class="card align-center" style="width: 100%;">

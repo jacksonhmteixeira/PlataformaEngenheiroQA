@@ -27,21 +27,26 @@
   <div class="split-in-half">
     <div class="card card-body">
       <div class="d-flex justify-content-center">
-        <h4>Produtos</h4>
+        <h4>Produtos Cadastrados</h4>
       </div>
       <div class="wrapper">
         <div *ngFor="let produto of produtos">
           <div class="card align-center" style="width: 100%;">
             <img src="{{produto.imagem}}" class="card-img-top">
             <div class="card-body">
-              <h5 class="card-title">
+              <h6 class="card-title">
                 {{produto.nomeDoProduto}}
-              </h5>
+              </h6>
               <p class="card-text">{{produto.descricao}}</p>
-              <a href="#" class="btn btn-primary">Visualizar</a>
             </div>
           </div>
         </div>
+      </div>
+      <div class="d-flex justify-content-center mt-3">
+        <button class="btn btn-theme-default-green" [routerLink]="['/mercado']">
+          <i class="material-icons small">visibility</i>
+          Visualizar Produtos
+        </button>
       </div>
     </div>
     <div class="card card-body">

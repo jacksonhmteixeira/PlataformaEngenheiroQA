@@ -22,7 +22,7 @@ export class PainelComponent implements OnInit {
   totaisDeProdutosAtivos: number = 0;
 
   constructor(public service: ProdutoService) {
-    this.produtos = service.getProduto();
+    this.produtos = service.getProduto().slice(0,2);
   }
 
   ngOnInit() { 
