@@ -41,7 +41,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="d-flex justify-content-end">
-                        <button class="btn btn-warning" ngbTooltip="Limpar Filtro de Pesquisa">
+                        <button class="btn btn-secondary" ngbTooltip="Limpar Filtro de Pesquisa">
                             <i class="material-icons small">auto_fix_normal</i>
                             Limpar Filtro
                         </button>
@@ -57,8 +57,6 @@
 
     <form>
         <div class="form-group form-inline">
-            <!-- <input class="form-control ml-2" type="text" name="searchTerm" [(ngModel)]="service.searchTerm"
-                placeholder="Pesquisar..." /> -->
             <span class="ml-3" *ngIf="service.loading$ | async">
                 <div class="d-flex justify-content-center">
                     <div class="spinner-border" role="status">
@@ -103,10 +101,10 @@
                         </span>
                     </td>
                     <td>
-                        <button class="btn btn-warning btn-sm" ngbTooltip="Alterar Produto">
+                        <button class="btn btn-secondary btn-sm" ngbTooltip="Alterar Produto">
                             <i class="material-icons mt-1 small md-dark">edit</i>
                         </button>
-                        <button class="btn btn-danger btn-sm ml-2" ngbTooltip="Excluir Produto">
+                        <button class="btn btn-danger btn-sm ml-2" ngbTooltip="Excluir Produto" (click)="open(produto.nomeDoProduto)">
                             <i class="material-icons mt-1 small md-dark">delete</i>
                         </button>
                     </td>

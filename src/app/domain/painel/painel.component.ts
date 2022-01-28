@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 
 import { Produto } from '../produto/produto';
 import { ProdutoService } from '../produto/produto.service';
-import { CurrencyMaskModule } from 'ng2-currency-mask';
 
 @Component({
   selector: 'app-painel',
@@ -22,7 +21,7 @@ export class PainelComponent implements OnInit {
   totaisDeProdutosAtivos: number = 0;
 
   constructor(public service: ProdutoService) {
-    this.produtos = service.getProduto().slice(0,2);
+    this.produtos = service.getProduto();
   }
 
   ngOnInit() { 

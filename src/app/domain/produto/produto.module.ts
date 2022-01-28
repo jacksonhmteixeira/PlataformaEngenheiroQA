@@ -8,16 +8,9 @@ import { ProdutoRoutingModule } from './produto-routing.module';
 import { NovoProdutoComponent } from './novo-produto/novo-produto.component'
 import { RouterModule } from '@angular/router';
 import { CKEditorModule } from 'ngx-ckeditor';
+import { ModalDeleteComponent } from '../modal-delete/modal-delete.component';
 
 @NgModule({
-    declarations: [
-        ListaProdutoComponent,
-        SortableProduto,
-        NovoProdutoComponent
-    ],
-    exports: [
-        ListaProdutoComponent
-    ],
     imports: [
         CommonModule,
         ProdutoRoutingModule,
@@ -26,6 +19,15 @@ import { CKEditorModule } from 'ngx-ckeditor';
         NgbModule,
         ReactiveFormsModule,
         CKEditorModule
+    ],
+    declarations: [
+        ListaProdutoComponent,
+        SortableProduto,
+        NovoProdutoComponent,
+        ModalDeleteComponent
+    ],
+    exports: [
+        ListaProdutoComponent
     ]
 })
 export class ProdutoModule {

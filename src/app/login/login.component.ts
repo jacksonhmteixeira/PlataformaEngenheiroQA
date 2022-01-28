@@ -4,6 +4,9 @@ import { Usuario } from './usuario'
 import { FormGroup } from '@angular/forms';
 import { FormBuilder } from '@angular/forms';
 import { Validators } from '@angular/forms';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ModalDeleteComponent } from '../domain/modal-delete/modal-delete.component';
+import { ModalInfoLoginComponent } from '../domain/modal-info-login/modal-info-login.component';
 
 @Component({
   selector: 'app-login',
@@ -21,13 +24,14 @@ export class LoginComponent implements OnInit {
   constructor(
     private builder: FormBuilder,
     private authService: AuthService,
+    private modalService: NgbModal
   ) { }
 
   ngOnInit(): void {
-    this.loginForm = this.builder.group({
+      this.loginForm = this.builder.group({
       email: ['', Validators.required],
       password: ['', Validators.required]
-    })
+    });
   }
 
   get formFields() {
@@ -47,5 +51,10 @@ export class LoginComponent implements OnInit {
         controle.markAsDirty;
       });
     }
+  }
+
+  open() {
+    const modalRef = this.modalService.open(ModalInfoLoginComponent, { scrollable: true });
+    modalRef.componentInstance.name = "Teste";
   }
 }

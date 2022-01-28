@@ -66,7 +66,7 @@ a, a:hover, a:focus {
 }
 
 #sidebar {
-    background: #16a085;
+    background: #24CC67;
     color: #fff;
     transition: all 0.3s;
 }
@@ -90,20 +90,20 @@ a, a:hover, a:focus {
     font-size: 1.1em;
     display: block;
 }
+
 #sidebar ul li a:hover {
-    color: #16a085;
+    color: #1da754;
     background: #fff;
 }
 
 #sidebar ul li.active > a, a[aria-expanded="true"] {
     color: #fff;
-    background: #0f826b;
+    background: #1da855;
 }
 
 /* DEFININDO IMAGEM DE PERFIL DO NAVBAR */
 .img_perfil_navbar {
-    border-radius: 60%;
-    width: 25px;
+    width: 100px;
 }
 
 .img_perfil_sidebar{

@@ -25,7 +25,14 @@
     border-radius: 10px;
 }
 
-.btn-login{
+.btn-como-acessar-login{
+    color: white;
     border-radius: 10px;
-    background: #16a085;
+    background: #5A6168;
+}
+
+.btn-login{
+    color: white;
+    border-radius: 10px;
+    background: #24CC67;
 }

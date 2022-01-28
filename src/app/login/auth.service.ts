@@ -18,11 +18,10 @@ export class AuthService {
   mostrarMenuEmitter = new EventEmitter<boolean>();
 
   fazerLogin(usuario: Usuario) {
-    if (usuario.email === "teste@gmail.com" && usuario.password === "123") {
+    if (usuario.email === "plataforma@engenheiroqa.com" && usuario.password === "plataformaEQA") {
       this.usuarioAutenticado = true;
       this.mostrarMenuEmitter.emit(true);
       this.router.navigate(['/painel']);
-      // this.toastr.success('Seja bem-vindo ao NextStar', "Bem-Vindo!");
     } else {
       this.usuarioAutenticado = false;
       this.mostrarMenuEmitter.emit(false);

@@ -14,12 +14,11 @@ import { PageNotFoundComponent } from './errors/page-not-found/page-not-found.co
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
-import { MercadoModule } from './domain/mercado/mercado.module'; 
-import { PainelModule } from './domain/painel/painel.module'
-import { UsuarioModule } from './domain/usuario/usuario.module'
-import { LoginModule } from './login/login.module'
-import { ProdutoModule } from './domain/produto/produto.module'
-import { RouterModule } from '@angular/router';
+import { MercadoModule } from './domain/mercado/mercado.module';
+import { PainelModule } from './domain/painel/painel.module';
+import { UsuarioModule } from './domain/usuario/usuario.module';
+import { LoginModule } from './login/login.module';
+import { ProdutoModule } from './domain/produto/produto.module';
 
 @NgModule({
   declarations: [
@@ -30,11 +29,11 @@ import { RouterModule } from '@angular/router';
     BrowserModule,
     CommonModule,
     BrowserAnimationsModule,
-    ToastrModule.forRoot(), 
+    ToastrModule.forRoot(),
     AppRouting,
     FormsModule,
     ReactiveFormsModule,
-    NgbPaginationModule, 
+    NgbPaginationModule,
     NgbAlertModule,
     NgbModule,
     FontAwesomeModule,
