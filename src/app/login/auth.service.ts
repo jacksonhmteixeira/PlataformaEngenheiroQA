@@ -18,14 +18,14 @@ export class AuthService {
   mostrarMenuEmitter = new EventEmitter<boolean>();
 
   fazerLogin(usuario: Usuario) {
-    if (usuario.email === "plataforma@engenheiroqa.com" && usuario.password === "plataformaEQA") {
+    if (usuario.email === "plataforma@engenheiroqa.com" && usuario.senha === "plataformaEQA") {
       this.usuarioAutenticado = true;
       this.mostrarMenuEmitter.emit(true);
       this.router.navigate(['/painel']);
     } else {
       this.usuarioAutenticado = false;
       this.mostrarMenuEmitter.emit(false);
-      this.toastr.error('Usuário/Senha incorreta.', 'Eii usuário!');
+      this.toastr.error('Usuário/Senha incorreto!');
     }
   }
 
@@ -33,7 +33,7 @@ export class AuthService {
     this.usuarioAutenticado = false;
     this.mostrarMenuEmitter.emit(false);
     this.router.navigate(['/login']);
-    this.toastr.success('Logout relizado com sucesso!', 'Até mais!');
+    this.toastr.success('Logout relizado com sucesso!');
   }
 
   usuarioEstaAutenticado() {

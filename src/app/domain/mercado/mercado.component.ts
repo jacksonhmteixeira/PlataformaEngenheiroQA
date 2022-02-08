@@ -35,7 +35,7 @@ export class MercadoComponent implements OnInit {
   }
 
   ngOnInit(){
-
+    
   }
 
   search(text: string, pipe: PipeTransform): Produto[] {

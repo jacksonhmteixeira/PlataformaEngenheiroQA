@@ -13,11 +13,11 @@
                     </ap-vmessage>
                 </div>
             </div>
-            <div class="form-group input-group-lg  mt-4" [ngClass]="{'has-error': formFields.password.touched}">
-                <input class="form-control input-border" type="password" id="password" formControlName="password"
+            <div class="form-group input-group-lg  mt-4" [ngClass]="{'has-error': formFields.senha.touched}">
+                <input class="form-control input-border" type="password" id="senha" formControlName="senha"
                     placeholder="Senha">
-                <div *ngIf="formFields.password.touched">
-                    <ap-vmessage *ngIf="loginForm.get('password').errors?.required" text="Senha é obrigatório!">
+                <div *ngIf="formFields.senha.touched">
+                    <ap-vmessage *ngIf="loginForm.get('senha').errors?.required" text="Senha é obrigatório!">
                     </ap-vmessage>
                 </div>
                 <small id="loginHelp" class="form-text text-white">
@@ -25,12 +25,12 @@
                 </small>
             </div>
             <div class="text-center mt-2">
-                <button class="btn btn-como-acessar-login btn-lg col-12" (click)="open()">
+                <button class="btn btn-como-acessar-login btn-lg col-12" type="button" (click)="open()">
                     ANTES DE ENTRAR, <span style="color:#30f77f">CLIQUE AQUI</span>!
                 </button>
             </div>
             <div class="text-center mt-2">
-                <button class="btn btn-login btn-lg col-12"
+                <button class="btn btn-login btn-lg col-12" id="buttonLogin" type="submit"
                     (click)="realizarLogin(loginForm.value)">ENTRAR</button>
             </div>
         </form>

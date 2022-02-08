@@ -8,8 +8,8 @@ export const PRODUTOS: Produto[] = [
         nomeDoProduto: 'Monitor 18 Polegadas',
         imagem: '../../../assets/monitor.png',
         quantidade: 1,
-        precoDeCompra: 5678,
-        precoDeVenda: 3215,
+        precoDeCompra: 599.99,
+        precoDeVenda: 791.42,
         descricao: 'Os K414 P são fones de ouvido leves tipo...',
         status: STATUS[0],
         categoria: CATEGORIAS[6]
@@ -18,8 +18,8 @@ export const PRODUTOS: Produto[] = [
         nomeDoProduto: 'Teclado',
         imagem: '../../../assets/teclado.png',
         quantidade: 1,
-        precoDeCompra: 5678,
-        precoDeVenda: 3215,
+        precoDeCompra: 99.99,
+        precoDeVenda: 159.99,
         descricao: 'Os K414 P são fones de ouvido leves tipo...',
         status: STATUS[1],
         categoria: CATEGORIAS[6]
@@ -28,10 +28,20 @@ export const PRODUTOS: Produto[] = [
         nomeDoProduto: 'Mouse',
         imagem: '../../../assets/mouse.png',
         quantidade: 1,
-        precoDeCompra: 5678,
-        precoDeVenda: 3215,
+        precoDeCompra: 59.90,
+        precoDeVenda: 99.90,
         descricao: 'Os K414 P são fones de ouvido leves tipo...',
         status: STATUS[0],
+        categoria: CATEGORIAS[6]
+    },{
+        id: 4,
+        nomeDoProduto: 'Monitor 24" polegadas',
+        imagem: '../../../assets/monitor.png',
+        quantidade: 4,
+        precoDeCompra: 750,
+        precoDeVenda: 967.12,
+        descricao: 'Os K414 P são fones de ouvido leves tipo...',
+        status: STATUS[1],
         categoria: CATEGORIAS[6]
     }
 ];

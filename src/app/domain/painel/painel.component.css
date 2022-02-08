@@ -40,3 +40,7 @@
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
+.alert {
+    margin-bottom: 8px;
+}

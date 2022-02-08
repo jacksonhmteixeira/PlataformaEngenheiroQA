@@ -1,11 +1,14 @@
 <div class="body-content">
+  <div class="alert alert-warning" role="alert">
+    <b class="alert-link">Atenção!</b> As dados contidos nesta página são fictícios, somente para testes.
+  </div>
   <div class="div-card-4 mb-2">
     <div class="card bg-dark text-white">
       <div class="ml-3 mt-2 mt-4 mr-3">
-        <div ngbTooltip="Valores de vendas recebidas hoje.">
+        <div ngbTooltip="Valor de compra e venda de todos os produtos.">
           <h6>Quantidade Total de Produtos: <b><span class="text-success">{{quantidadeTotalDeProduto}}</span></b></h6>
-          <h6>Valor Total de Compra: <b><span class="text-success">{{valorTotalDeCompra}}</span></b></h6>
-          <h6>Valor Total de Venda: <b><span class="text-success">{{valorTotalDeVenda}}</span></b></h6>
+          <h6>Valor Total de Compra: <b><span class="text-success">{{valorTotalDeCompra | currency : 'BRL'}}</span></b></h6>
+          <h6>Valor Total de Venda: <b><span class="text-success">{{valorTotalDeVenda | currency : 'BRL'}}</span></b></h6>
         </div>
       </div>
     </div>
@@ -30,7 +33,7 @@
         <h4>Produtos Cadastrados</h4>
       </div>
       <div class="wrapper">
-        <div *ngFor="let produto of produtos">
+        <div *ngFor="let produto of produtosCadastrados">
           <div class="card align-center" style="width: 100%;">
             <img src="{{produto.imagem}}" class="card-img-top">
             <div class="card-body">
@@ -50,7 +53,7 @@
       </div>
     </div>
     <div class="card card-body">
-      <app-grafico-trinta-dias></app-grafico-trinta-dias>
+      <app-grafico-sete-dias></app-grafico-sete-dias>
     </div>
   </div>
 </div>

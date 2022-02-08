@@ -1,4 +1,7 @@
 <div class="body-content">
+    <div class="alert alert-warning" role="alert">
+        <b class="alert-link">Atenção!</b> As dados contidos nesta página são fictícios, somente para testes.
+    </div>
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a [routerLink]="['/painel']">Painel</a></li>
@@ -87,10 +90,10 @@
                         </ngb-highlight>
                     </td>
                     <td>
-                        {{produto.precoDeCompra}} R$
+                        {{produto.precoDeCompra | currency : 'BRL'}}
                     </td>
                     <td>
-                        {{produto.precoDeVenda}} R$
+                        {{produto.precoDeVenda | currency : 'BRL'}}
                     </td>
                     <td>
                         <span *ngIf="produto.status.id == 1" class="badge text-white rounded-pill bg-success mt-2">
@@ -104,7 +107,8 @@
                         <button class="btn btn-secondary btn-sm" ngbTooltip="Alterar Produto">
                             <i class="material-icons mt-1 small md-dark">edit</i>
                         </button>
-                        <button class="btn btn-danger btn-sm ml-2" ngbTooltip="Excluir Produto" (click)="open(produto.nomeDoProduto)">
+                        <button class="btn btn-danger btn-sm ml-2" ngbTooltip="Excluir Produto"
+                            (click)="open(produto.nomeDoProduto)">
                             <i class="material-icons mt-1 small md-dark">delete</i>
                         </button>
                     </td>

@@ -1,26 +1,47 @@
-import { Component } from '@angular/core';
-import { ChartDataSets, ChartOptions } from 'chart.js';
-import { Color, Label } from 'ng2-charts';
+import { Component } from "@angular/core";
+import { ChartDataSets, ChartOptions } from "chart.js";
+import * as moment from "moment";
+import { Color, Label } from "ng2-charts";
 
 @Component({
     selector: 'app-grafico-sete-dias',
     templateUrl: './grafico-sete-dias.component.html'
 })
-export class GraficoSeteDiasComponent {
+export class GraficoTrintaDiasComponent {
+
+    subtraindoData(i: number) {
+        return moment().subtract('days', i).format('DD/MM/YYYY');;
+    }
+
+    retornandoNumero() {
+        return Math.random() * 100;
+    }
 
     public lineChartData: ChartDataSets[] = [
-        { data: [0, 0, 40.90, 70, 60, 100, 80], label: "Últimos 7 Dias" }
+        { 
+            data: [
+                this.retornandoNumero(),
+                this.retornandoNumero(),
+                this.retornandoNumero(),
+                this.retornandoNumero(),
+                this.retornandoNumero(),
+                this.retornandoNumero(),
+                this.retornandoNumero()
+            ], 
+            label: "VENDAS DOS ÚLTIMOS 7 DIAS" 
+        }
     ];
 
     public lineChartLabels: Label[] = [
-        "19/10",
-        "20/10",
-        "21/10",
-        "22/10",
-        "23/10",
-        "24/10",
-        "25/10"
+        this.subtraindoData(6),
+        this.subtraindoData(5),
+        this.subtraindoData(4),
+        this.subtraindoData(3),
+        this.subtraindoData(2),
+        this.subtraindoData(1),
+        this.subtraindoData(0)
     ];
+
 
     public lineChartOptions: ChartOptions = {
         responsive: true
@@ -28,9 +49,8 @@ export class GraficoSeteDiasComponent {
 
     public lineChartColors: Color[] = [{
         borderColor: "#343A40",
-        backgroundColor: "rgba(22,160,133,0.5)"
+        backgroundColor: "#24CC67"
     }];
-    
     public lineChartLegend = true;
     public lineChartType = "line";
     public lineChartPlugins = [];

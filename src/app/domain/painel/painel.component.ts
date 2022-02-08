@@ -13,6 +13,7 @@ import { ProdutoService } from '../produto/produto.service';
 export class PainelComponent implements OnInit {
 
   produtos: Produto[];
+  produtosCadastrados: Produto[];
 
   quantidadeTotalDeProduto: number = 0;
   valorTotalDeCompra: number = 0;
@@ -22,6 +23,7 @@ export class PainelComponent implements OnInit {
 
   constructor(public service: ProdutoService) {
     this.produtos = service.getProduto();
+    this.produtosCadastrados = service.getProduto().slice(0,2);
   }
 
   ngOnInit() { 

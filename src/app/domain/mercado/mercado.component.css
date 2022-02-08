@@ -15,3 +15,7 @@
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
+.alert {
+    margin-bottom: 8px;
+}

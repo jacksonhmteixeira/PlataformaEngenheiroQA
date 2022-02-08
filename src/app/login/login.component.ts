@@ -5,7 +5,6 @@ import { FormGroup } from '@angular/forms';
 import { FormBuilder } from '@angular/forms';
 import { Validators } from '@angular/forms';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { ModalDeleteComponent } from '../domain/modal-delete/modal-delete.component';
 import { ModalInfoLoginComponent } from '../domain/modal-info-login/modal-info-login.component';
 
 @Component({
@@ -30,7 +29,7 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
       this.loginForm = this.builder.group({
       email: ['', Validators.required],
-      password: ['', Validators.required]
+      senha: ['', Validators.required]
     });
   }
 

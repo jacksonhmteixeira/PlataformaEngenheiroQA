@@ -1,11 +1,13 @@
 <div class="body-content">
+    <div class="alert alert-warning" role="alert">
+        <b class="alert-link">Atenção!</b> As dados contidos nesta página são fictícios, somente para testes.
+    </div>
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a [routerLink]="['/painel']">Painel</a></li>
             <li class="breadcrumb-item active" aria-current="page">Mercado</li>
         </ol>
     </nav>
-
     <div class="mb-3">
         <h4>Mercado</h4>
         <small>Aqui estão todos os produtos disponíveis para venda.</small>
@@ -21,7 +23,6 @@
             <div class="card align-center" style="width: 100%;">
                 <img src="{{produto.imagem}}" class="card-img-top">
                 <div class="card-body">
-
                     <h5 class="card-title" [term]="filterProduto.nomeDoProduto">
                         {{produto.nomeDoProduto}}
                     </h5>
