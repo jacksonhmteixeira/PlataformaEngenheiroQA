@@ -46,6 +46,12 @@ a[data-toggle="collapse"] {
     }
 }
 
+@media (min-width: 768px) {
+    .visualizar-menu{
+        display: none;
+    }
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     background: #fafafa;

@@ -8,7 +8,7 @@ import { ProdutoRoutingModule } from './produto-routing.module';
 import { NovoProdutoComponent } from './novo-produto/novo-produto.component'
 import { RouterModule } from '@angular/router';
 import { CKEditorModule } from 'ngx-ckeditor';
-import { ModalDeleteComponent } from '../modal-delete/modal-delete.component';
+import { ModalDeleteComponent } from '../../shared/modal-delete/modal-delete.component';
 
 @NgModule({
     imports: [

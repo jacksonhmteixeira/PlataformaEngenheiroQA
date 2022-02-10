@@ -3,6 +3,10 @@
         <form [formGroup]="loginForm" class="container login-layout">
             <div class="text-center">
                 <img width="200" src="../assets/logo-engenheiroQA-800px.webp">
+                <h6 class="text-light">
+                    Aproveite ao máximo a plataforma. <br> 
+                    Bons estudos!
+                </h6>
             </div>
 
             <div class="form-group input-group-lg mt-5" [ngClass]="{'has-error': formFields.email.touched}">
@@ -12,6 +16,9 @@
                     <ap-vmessage *ngIf="loginForm.get('email').errors?.required" text="E-mail é obrigatorio!">
                     </ap-vmessage>
                 </div>
+                <small id="loginHelp" class="form-text text-white">
+                    <b>E-mail:</b> plataforma@engenheiroqa.com
+                </small>
             </div>
             <div class="form-group input-group-lg  mt-4" [ngClass]="{'has-error': formFields.senha.touched}">
                 <input class="form-control input-border" type="password" id="senha" formControlName="senha"
@@ -21,12 +28,12 @@
                     </ap-vmessage>
                 </div>
                 <small id="loginHelp" class="form-text text-white">
-                    Utilize o e-mail e senha disponibilizado no botão abaixo.
+                    <b>Senha:</b> plataformaEQA
                 </small>
             </div>
             <div class="text-center mt-2">
                 <button class="btn btn-como-acessar-login btn-lg col-12" type="button" (click)="open()">
-                    ANTES DE ENTRAR, <span style="color:#30f77f">CLIQUE AQUI</span>!
+                   COMO FUNCIONA?
                 </button>
             </div>
             <div class="text-center mt-2">

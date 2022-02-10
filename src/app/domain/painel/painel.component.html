@@ -1,6 +1,6 @@
 <div class="body-content">
   <div class="alert alert-warning" role="alert">
-    <b class="alert-link">Atenção!</b> As dados contidos nesta página são fictícios, somente para testes.
+    <b class="alert-link">Atenção!</b> As informações contidos nesta página são dados fictícios, somente para testes.
   </div>
   <div class="div-card-4 mb-2">
     <div class="card bg-dark text-white">
@@ -13,14 +13,14 @@
       </div>
     </div>
     <div class="card bg-danger text-white">
-      <div class="ml-3 mt-2 mr-3 mb-1">
+      <div class="ml-3 mt-2 mr-3 mb-1" ngbTooltip="Quantidade total de Produtos Inativos.">
         <i class="material-icons md-36">block</i>
         <h4 class="d-flex justify-content-end"><b>{{totaisDeProdutosInativos}}</b></h4>
         <h6 class="d-flex justify-content-end">Produtos Inativos</h6>
       </div>
     </div>
     <div class="card btn-theme-default-green text-white">
-      <div class="ml-3 mt-2 mr-3 mb-1">
+      <div class="ml-3 mt-2 mr-3 mb-1" ngbTooltip="Quantidade total de Produtos Ativos.">
         <i class="material-icons md-36">check</i>
         <h4 class="d-flex justify-content-end"><b>{{totaisDeProdutosAtivos}}</b></h4>
         <h6 class="d-flex justify-content-end">Produtos Ativos</h6>
@@ -46,7 +46,7 @@
         </div>
       </div>
       <div class="d-flex justify-content-center mt-3">
-        <button class="btn btn-theme-default-green" [routerLink]="['/mercado']">
+        <button class="btn btn-theme-default-green" id="buttonVisualizarProdutos" [routerLink]="['/mercado']">
           <i class="material-icons small">visibility</i>
           Visualizar Produtos
         </button>

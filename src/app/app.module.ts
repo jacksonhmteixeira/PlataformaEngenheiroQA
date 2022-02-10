@@ -16,7 +16,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { MercadoModule } from './domain/mercado/mercado.module';
 import { PainelModule } from './domain/painel/painel.module';
-import { UsuarioModule } from './domain/usuario/usuario.module';
 import { LoginModule } from './login/login.module';
 import { ProdutoModule } from './domain/produto/produto.module';
 
@@ -39,7 +38,6 @@ import { ProdutoModule } from './domain/produto/produto.module';
     FontAwesomeModule,
     MercadoModule,
     PainelModule,
-    UsuarioModule,
     LoginModule,
     ProdutoModule
   ],

@@ -19,24 +19,26 @@ export class AuthService {
 
   fazerLogin(usuario: Usuario) {
     if (usuario.email === "plataforma@engenheiroqa.com" && usuario.senha === "plataformaEQA") {
-      this.usuarioAutenticado = true;
-      this.mostrarMenuEmitter.emit(true);
+      this.usuarioEstaAutenticado(true);
       this.router.navigate(['/painel']);
     } else {
-      this.usuarioAutenticado = false;
-      this.mostrarMenuEmitter.emit(false);
+      this.usuarioEstaAutenticado(false);
       this.toastr.error('Usuário/Senha incorreto!');
     }
   }
 
-  realizarLogout(){
-    this.usuarioAutenticado = false;
-    this.mostrarMenuEmitter.emit(false);
+  realizarLogout() {
+    this.usuarioEstaAutenticado(false);
     this.router.navigate(['/login']);
     this.toastr.success('Logout relizado com sucesso!');
   }
 
-  usuarioEstaAutenticado() {
+  verificarSeEstaAutenticado() {
     return this.usuarioAutenticado;
+  }
+
+  usuarioEstaAutenticado(isTrueOrFalse) {
+    this.usuarioAutenticado = isTrueOrFalse;
+    this.mostrarMenuEmitter.emit(isTrueOrFalse);
   }
 }

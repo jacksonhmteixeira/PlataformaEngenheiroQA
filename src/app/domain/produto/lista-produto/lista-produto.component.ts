@@ -5,7 +5,7 @@ import { Produto } from '../produto';
 import { Observable } from 'rxjs';
 import { DecimalPipe } from '@angular/common';
 import { Categoria } from '../../categoria/categorias';
-import { ModalDeleteComponent } from '../../modal-delete/modal-delete.component';
+import { ModalDeleteComponent } from '../../../shared/modal-delete/modal-delete.component';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({

@@ -7,7 +7,6 @@ import { LoginComponent } from './login/login.component';
 import { AuthGuard } from './guards/auth.guard';
 import { PainelComponent } from './domain/painel/painel.component';
 import { MercadoComponent } from './domain/mercado/mercado.component';
-import { UsuarioComponent } from './domain/usuario/usuario.component';
 
 const AppRoutes: Routes = [
     { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -19,7 +18,6 @@ const AppRoutes: Routes = [
         loadChildren: () => import('./domain/produto/produto.module').then((m) => m.ProdutoModule),
         canActivate: [AuthGuard]
     },
-    { path: 'usuario', component: UsuarioComponent },
     { path: '**', component: PageNotFoundComponent }
 ];
 

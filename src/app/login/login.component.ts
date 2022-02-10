@@ -5,7 +5,7 @@ import { FormGroup } from '@angular/forms';
 import { FormBuilder } from '@angular/forms';
 import { Validators } from '@angular/forms';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { ModalInfoLoginComponent } from '../domain/modal-info-login/modal-info-login.component';
+import { ModalInfoLoginComponent } from '../shared/modal-info-login/modal-info-login.component';
 
 @Component({
   selector: 'app-login',
@@ -15,6 +15,7 @@ import { ModalInfoLoginComponent } from '../domain/modal-info-login/modal-info-l
 export class LoginComponent implements OnInit {
   //DECLARACAO DE ICONES
 
+
   loginForm: FormGroup;
   @ViewChild('emailInput') emailInput: ElementRef<HTMLInputElement>;
   usuario: Usuario;
@@ -23,11 +24,12 @@ export class LoginComponent implements OnInit {
   constructor(
     private builder: FormBuilder,
     private authService: AuthService,
-    private modalService: NgbModal
+    private modalService: NgbModal,
   ) { }
 
   ngOnInit(): void {
-      this.loginForm = this.builder.group({
+    this.authService.usuarioEstaAutenticado(false);
+    this.loginForm = this.builder.group({
       email: ['', Validators.required],
       senha: ['', Validators.required]
     });
@@ -43,7 +45,7 @@ export class LoginComponent implements OnInit {
     this.authService.fazerLogin(this.loginForm.value);
     this.emailInput.nativeElement.focus();
     this.loginForm.reset();
-    
+
     if (this.loginForm.invalid) {
       Object.keys(this.loginForm.controls).forEach(campo => {
         const controle = this.loginForm.get(campo);
@@ -54,6 +56,5 @@ export class LoginComponent implements OnInit {
 
   open() {
     const modalRef = this.modalService.open(ModalInfoLoginComponent, { scrollable: true });
-    modalRef.componentInstance.name = "Teste";
   }
 }
