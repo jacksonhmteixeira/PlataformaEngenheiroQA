@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-novo-produto',
@@ -7,7 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NovoProdutoComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router: Router,
+    private toastr: ToastrService
+  ) { }
 
   ngOnInit(): void {
   }
@@ -20,14 +25,11 @@ export class NovoProdutoComponent implements OnInit {
  
   preview(files) {
     if (files.length === 0) return;
-
     var mimeType = files[0].type;
-    
     if (mimeType.match(/image\/*/) == null) {
       this.message = "Somente imagens são suportadas.";
       return;
-    }
- 
+    } 
     var reader = new FileReader();
     this.imagePath = files;
     reader.readAsDataURL(files[0]); 
@@ -35,5 +37,10 @@ export class NovoProdutoComponent implements OnInit {
       this.imgURL = reader.result; 
       console.log(this.imgURL);
     }
+  }
+
+  salvarProduto() {
+    this.router.navigate(['/produto']);
+    this.toastr.success('Produto cadastrado com sucesso!');
   }
 }

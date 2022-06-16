@@ -30,7 +30,7 @@ export class AuthService {
   realizarLogout() {
     this.usuarioEstaAutenticado(false);
     this.router.navigate(['/login']);
-    this.toastr.success('Logout relizado com sucesso!');
+    this.toastr.success('Logout realizado com sucesso!');
   }
 
   verificarSeEstaAutenticado() {
