@@ -54,14 +54,14 @@
           </div>
         </div>
         <label for="inputFornecedor" class="form-label">Descrição: <small class="text-danger">*</small></label>
-        <ck-editor name="editor1" [(ngModel)]="editorValue" skin="moono-lisa" language="en" [fullPage]="true"></ck-editor>
+        <ck-editor name="editor1" id="inputDescricao" [(ngModel)]="editorValue" skin="moono-lisa" language="en" [fullPage]="true"></ck-editor>
       </form>
       <div class="d-flex justify-content-end mt-4">
-        <button class="btn btn-theme-default-dark ml-2" ngbTooltip="Cancelar Cadastro" [routerLink]="['/produto']">
+        <button class="btn btn-theme-default-dark ml-2" id="buttonCancelar" ngbTooltip="Cancelar Cadastro" [routerLink]="['/produto']">
           <i class="material-icons small">close</i>
           Cancelar
         </button>
-        <button class="btn btn-theme-default-green ml-2" ngbTooltip="Salvar Produto" (click)="salvarProduto()">
+        <button class="btn btn-theme-default-green ml-2" id="buttonSalvar" ngbTooltip="Salvar Produto" (click)="salvarProduto()">
           <i class="material-icons small">save</i>
           Salvar
         </button>

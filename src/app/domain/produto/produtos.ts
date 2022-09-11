@@ -35,7 +35,7 @@ export const PRODUTOS: Produto[] = [
         categoria: CATEGORIAS[6]
     },{
         id: 4,
-        nomeDoProduto: 'Monitor 24" polegadas',
+        nomeDoProduto: 'Monitor 24 polegadas',
         imagem: '../../../assets/monitor.png',
         quantidade: 4,
         precoDeCompra: 750,
