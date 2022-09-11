@@ -17,7 +17,7 @@
             <div class="row">
                 <div class="mb-3 col-md-6 form-group">
                     <label for="produto">Produto:</label>
-                    <select class="form-control" id="produto">
+                    <select class="form-control" id="selecionarProduto">
                         <option selected>Selecione...</option>
                         <option *ngFor="let produto of produtos" value={{produto.id}}>
                             {{produto.nomeDoProduto}}
@@ -26,7 +26,7 @@
                 </div>
                 <div class="mb-3 col-md-6 form-group">
                     <label for="categoria">Categoria:</label>
-                    <select class="form-control" id="categoria">
+                    <select class="form-control" id="selecionarCategoria">
                         <option selected>Selecione...</option>
                         <option *ngFor="let categoria of categorias" value={{categoria.id}}>
                             {{categoria.categoria}}
