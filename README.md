@@ -1,32 +1,45 @@
 <div align="center">
 
-# **Plataforma para Automação**
+# **Plataforma - Engenheiro QA**
 
 Esse projeto tem o intuito de aprimorar os estudos sobre **Front-End (Angular)** e disponibilizar uma plataforma para realizar Automação de Testes. 
 </div>
 
+ ## **Página de Login**
+
 <div align="center">
 
- ## PÁGINA DE LOGIN
-
 ![Login](document/prints/login.png "Login Page")
+
 **1° Imagem:** Página de Login com a disponibilização do e-mail e senha na tela.
 
 </div>
 
- ## DASHBOARD
+ ## **Dashboard**
 
 <div align="center">
 
 ![Home](document/prints/home-page.png "Home Page")
 
+**2° Imagem:** Dashboard com algumas informações fictícias.
+
 </div>
 
-- ## Store Page
+## **Página Mercado**
+
+<div align="center">
 
 ![Store](document/prints/store-page.png "Store Page")
 
-# Nextstar
+**3° Imagem:** Página Mercado, podendo visualizar todos os produtos disponíveis (Dados fictícios).
+
+</div>
+
+<div align="center">
+
+# Como executar o projeto (Inglês)
+
+</div>
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.3.
 
@@ -45,7 +58,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io). 
 
 ## Running end-to-end tests
 
