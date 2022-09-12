@@ -1,12 +1,26 @@
-# Print screen
+<div align="center">
 
-- ## Login Page
+# **Plataforma para Automação**
+
+Esse projeto tem o intuito de aprimorar os estudos sobre **Front-End (Angular)** e disponibilizar uma plataforma para realizar Automação de Testes. 
+</div>
+
+<div align="center">
+
+ ## PÁGINA DE LOGIN
 
 ![Login](document/prints/login.png "Login Page")
+**1° Imagem:** Página de Login com a disponibilização do e-mail e senha na tela.
 
-- ## Home Page 
+</div>
+
+ ## DASHBOARD
+
+<div align="center">
 
 ![Home](document/prints/home-page.png "Home Page")
+
+</div>
 
 - ## Store Page
 
