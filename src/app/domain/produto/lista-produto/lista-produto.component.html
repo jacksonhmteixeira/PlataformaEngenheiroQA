@@ -1,7 +1,8 @@
 <div class="body-content">
     <div class="alert alert-warning" role="alert">
-        <b class="alert-link">Atenção!</b> As informações contidos nesta página são dados fictícios, somente para testes.
-      </div>
+        <b class="alert-link">Atenção!</b> As informações contidos nesta página são dados fictícios, somente para
+        testes.
+    </div>
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a [routerLink]="['/painel']">Painel</a></li>
@@ -35,20 +36,29 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-6">
-                    <button class="btn btn-theme-default-green" [routerLink]="['/produto/novo']"
-                        ngbTooltip="Cadastrar Produto">
-                        <i class="material-icons small">add</i>
-                        Cadastrar
-                    </button>
-                </div>
-                <div class="col-md-6">
-                    <div class="d-flex justify-content-end">
-                        <button class="btn btn-secondary" ngbTooltip="Limpar Filtro de Pesquisa">
-                            <i class="material-icons small">auto_fix_normal</i>
-                            Limpar Filtro
+                <div class="col-md-3">
+                    <div class="visibilidadeEsquerdaCadastrar">
+                        <button class="btn btn-theme-default-green" [routerLink]="['/produto/novo']"
+                            ngbTooltip="Cadastrar Produto">
+                            <i class="material-icons small">add</i>
+                            Cadastrar
                         </button>
-                        <button class="btn btn-theme-default-green ml-2" ngbTooltip="Pesquisar">
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="d-flex justify-content-end">
+                        <div class="visibilidadeDireitaCadastrar">
+                            <button class="btn btn-theme-default-green" [routerLink]="['/produto/novo']"
+                                ngbTooltip="Cadastrar Produto">
+                                <i class="material-icons small">add</i>
+                                Cadastrar
+                            </button>
+                        </div>
+                        <button class="btn btn-secondary ml-2" ngbTooltip="Limpar Filtro de Pesquisa">
+                            <i class="material-icons small">auto_fix_normal</i>
+                            Limpar
+                        </button>
+                        <button class="btn btn-info ml-2" ngbTooltip="Pesquisar">
                             <i class="material-icons small">filter_alt</i>
                             Pesquisar
                         </button>
@@ -73,10 +83,13 @@
             <thead class="table-theme-default">
                 <tr>
                     <th scope="col" sortable="name" (sort)="onSort($event)">Produto</th>
-                    <th scope="col" sortable="category" (sort)="onSort($event)">Categoria</th>
-                    <th scope="col" sortable="value" (sort)="onSort($event)">Valor de Compra</th>
-                    <th scope="col" sortable="percentageCommission" (sort)="onSort($event)">Valor de Venda</th>
-                    <th scope="col" sortable="status" (sort)="onSort($event)">Status</th>
+                    <th class="visibilidadeCategoria" scope="col" sortable="category" (sort)="onSort($event)">Categoria
+                    </th>
+                    <th class="visibilidadeValorDeCompra" scope="col" sortable="value" (sort)="onSort($event)">Valor de
+                        Compra</th>
+                    <th class="visibilidadePrecoDeVenda" scope="col" sortable="percentageCommission"
+                        (sort)="onSort($event)">Valor de Venda</th>
+                    <th class="visibilidadeSatus" scope="col" sortable="status" (sort)="onSort($event)">Status</th>
                     <th scope="col">Ação</th>
                 </tr>
             </thead>
@@ -85,28 +98,22 @@
                     <td>
                         <ngb-highlight [result]="produto.nomeDoProduto" [term]="service.searchTerm"></ngb-highlight>
                     </td>
-                    <td>
+                    <td class="visibilidadeCategoria">
                         <ngb-highlight [result]="produto.categoria.categoria" [term]="service.searchTerm">
                         </ngb-highlight>
                     </td>
-                    <td>
-                        {{produto.precoDeCompra | currency : 'BRL'}}
-                    </td>
-                    <td>
-                        {{produto.precoDeVenda | currency : 'BRL'}}
-                    </td>
-                    <td>
+                    <td class="visibilidadeValorDeCompra">{{produto.precoDeCompra | currency : 'BRL'}}</td>
+                    <td class="visibilidadePrecoDeVenda"> {{produto.precoDeVenda | currency : 'BRL'}}</td>
+                    <td class="visibilidadeSatus">
                         <span *ngIf="produto.status.id == 1" class="badge text-white rounded-pill bg-success mt-2">
-                            {{produto.status.status}}
-                        </span>
+                            {{produto.status.status}}</span>
                         <span *ngIf="produto.status.id == 2" class="badge text-white rounded-pill bg-danger mt-2">
                             {{produto.status.status}}
                         </span>
                     </td>
                     <td>
-                        <button class="btn btn-secondary btn-sm" ngbTooltip="Alterar Produto">
-                            <i class="material-icons mt-1 small md-dark">edit</i>
-                        </button>
+                        <button class="btn btn-secondary btn-sm" ngbTooltip="Alterar Produto"><i
+                                class="material-icons mt-1 small md-dark">edit</i></button>
                         <button class="btn btn-danger btn-sm ml-2" ngbTooltip="Excluir Produto"
                             (click)="open(produto.nomeDoProduto)">
                             <i class="material-icons mt-1 small md-dark">delete</i>
