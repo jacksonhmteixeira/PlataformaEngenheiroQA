@@ -18,7 +18,7 @@ export class AuthService {
   mostrarMenuEmitter = new EventEmitter<boolean>();
 
   fazerLogin(usuario: Usuario) {
-    if (usuario.email === "plataforma@engenheiroqa.com" && usuario.senha === "plataformaEQA") {
+    if (usuario.email === "plataforma@jacksonteixeira.com" && usuario.senha === "plataformaJT") {
       this.usuarioEstaAutenticado(true);
       this.router.navigate(['/painel']);
     } else {

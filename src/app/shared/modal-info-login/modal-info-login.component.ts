@@ -16,10 +16,5 @@ export class ModalInfoLoginComponent {
     public activeModal: NgbActiveModal,
     private toastr: ToastrService,
   ) { }
-
-  excluindoProduto(name) {
-    this.activeModal.close('Close click');
-    this.toastr.success(name + " excluido com sucesso!", 'Excluído');
-  }
 }
 

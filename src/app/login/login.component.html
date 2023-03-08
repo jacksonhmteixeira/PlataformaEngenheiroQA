@@ -2,14 +2,14 @@
     <div class="box-login pb-4 pt-4">
         <form [formGroup]="loginForm" class="container login-layout">
             <div class="text-center">
-                <img width="200" src="../assets/logo-engenheiroQA-800px.webp">
-                <h6 class="text-light">
-                    Aproveite ao máximo a plataforma. <br> 
-                    Bons estudos!
+                <img width="100" src="../assets/logo-black-jt.png">
+                <h6 class="text-light mt-2">
+                    Aproveite ao Máximo a Plataforma. <br> 
+                    Bons Estudos!
                 </h6>
             </div>
 
-            <div class="form-group input-group-lg mt-5" [ngClass]="{'has-error': formFields.email.touched}">
+            <div class="form-group input-group-lg mt-4" [ngClass]="{'has-error': formFields.email.touched}">
                 <input #emailInput class="form-control input-border" type="email" id="email" formControlName="email"
                     maxlength="50" placeholder="E-mail">
                 <div *ngIf="formFields.email.touched">
@@ -17,7 +17,7 @@
                     </ap-vmessage>
                 </div>
                 <small id="loginHelp" class="form-text text-white">
-                    <b>E-mail:</b> plataforma@engenheiroqa.com
+                    <b>E-mail:</b> plataforma@jacksonteixeira.com
                 </small>
             </div>
             <div class="form-group input-group-lg  mt-4" [ngClass]="{'has-error': formFields.senha.touched}">
@@ -28,11 +28,11 @@
                     </ap-vmessage>
                 </div>
                 <small id="loginHelp" class="form-text text-white">
-                    <b>Senha:</b> plataformaEQA
+                    <b>Senha:</b> plataformaJT
                 </small>
             </div>
             <div class="text-center mt-2">
-                <button class="btn btn-como-acessar-login btn-lg col-12" type="button" (click)="open()">
+                <button class="btn btn-como-acessar-login btn-lg col-12" id="comoFunciona" type="button" (click)="open()">
                    COMO FUNCIONA?
                 </button>
             </div>
